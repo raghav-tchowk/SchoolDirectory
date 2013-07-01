@@ -6,7 +6,7 @@ class SchoolDirectory < ActiveRecord::Base
  EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
  validates :email_id, :format => EMAIL_REGEX
  validates :webaddress, :format => /^[A-Z0-9.-]+\.[A-Z]{2,4}$/i
- validates :email_id, :format => EMAIL_REGEX
+ #validates :email_id, :format => EMAIL_REGEX
 
  validates :mobile_no1, :length => { :maximum => 10 }, :format => /^[0-9]{10}$/
  #validates :mobile_no2, :format => /^[0-9]{10}$/
@@ -19,3 +19,5 @@ class SchoolDirectory < ActiveRecord::Base
 
 end
 #i can't leave out the field if some validations are applied 
+#<!--
+#<%= #how to add conditional table rows and data, how to make a multiple-select-dropdownmenu, how to display a range in reverse order %> -->
