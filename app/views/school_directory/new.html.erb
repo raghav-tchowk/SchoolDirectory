@@ -1,0 +1,26 @@
+<%= link_to("<<Back to list", {:action=>"list"}, :class=>"back-links") %>
+<div class="school new">
+<h2>Create schools</h2>
+<%= form_for(:school, :url=>{:action=>"create"}) do |f| %>
+
+
+
+
+	<%= render(:partial=>"tabletofill", :locals=>{:f=>f}) %>
+
+
+	<p> * fields marked with asterisk are compulsary fields</p>
+
+		<div class="form_buttons">
+
+		<%=submit_tag("Create school") %>
+
+		</div>
+<% end -%>
+</div>
+
+<div id="errors" style="color:red">
+	<% @school.errors.full_messages.each do |err| %>
+    	*<%= err %><br />
+    <% end %>
+</div>

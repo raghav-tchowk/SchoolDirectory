@@ -1,0 +1,31 @@
+<h1>Showing Record of <%=@school.name %> from SchoolDirectory</h1>
+<%= link_to("<<Back to list", {:action=>"list"}, :class=>"back-links") %>
+<div class="School show">
+<!--<h2>Show schools</h2> -->
+<div class="Schools list">
+<!--<h2>Schools</h2>-->
+
+<ul>
+<li><b>ID</b> <%=@school.id%></li>
+<li><b>name</b>  <%=@school.name%></li>
+<li class="center"><b>address_line1</b>  <%=@school.address_line1 %></li>
+<li class="center"><b>address_line2</b>  <%=@school.address_line2 %></li>
+<li class="center"><b>city</b>  <%=@school.city %></li>
+<li class="center"><b>state</b>  <%=@school.state %></li>
+<li class="center"><b>pincode</b>  <%=@school.pincode %></li>
+<li class="center"><b>webaddress</b>  <%=@school.webaddress %></li>
+<li class="center"><b>email_id</b>  <%=@school.email_id %></li>
+<li class="center"><b>landline_no1</b>  <%=@school.landline_no1 %></li>
+<li class="center"><b>landline_no2</b>  <%=@school.landline_no2 %></li>
+<li class="center"><b>fax_no1</b>  <%=@school.fax_no1 %></li>
+<li class="center"><b>fax_no2</b>  <%=@school.fax_no2 %></li>
+<li class="center"><b>mobile_no1</b>  <%=@school.mobile_no1 %></li>
+<li class="center"><b>mobile_no2</b>  <%=@school.mobile_no2 %></li>
+<li class="center"><b>affliated</b>  <%=@school.affliated %></li>
+<li class="center"><b>affliated_to_board</b>  <%=@school.affliated_to_board %></li>
+<li class="center"><b>established_year</b>  <%=@school.established_year %></li>
+<li class="center"><b>Class</b>  <%=@school.classe %></li>
+<li class="center"><b>medium</b>  <%=@school.medium %></li>
+</ul>
+
+</div>
