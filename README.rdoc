@@ -1,3 +1,39 @@
+SchoolDirectory app 
+Basic CRUD with the below fields for school_directory 
+
+name
+address_line1
+address_line2
+city
+state
+pincode
+webaddress
+email_id
+landline_no1
+landline_no2
+fax_no1
+fax_no2
+mobile_no1
+mobile_no2
+affliated                    boolean values yes or no
+affliated_to_board       values cbse/icse etc ( use dropdown )
+estabished_year                                   (use dropdown )
+classes     values one, two three etc  ( use multiple select    dropdown
+medium                    values english hindi etc ( use dropdown )
+
+
+
+No stylesheets added
+
+Controller Name : school_directory 
+Model name  : school_directory 
+table name : school_directories
+
+Most of the things work but there are few issues they are commented out at end of model 
+
+
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
