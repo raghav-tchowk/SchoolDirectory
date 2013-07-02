@@ -95,13 +95,14 @@
 
 <tr >
 <td><%=f.label(:established_year) %>*</td>
-<td><%=f.select(:established_year, 1600..2013, {:set=>1990, :multiple=>true,  :prompt => "-select-"}) %></td>
+<% h= (1600..2013).sort.reverse %>
+<td><%=f.select(:established_year, h, {:prompt => "-select-"}) %></td>
 </tr>
 
 
 <tr >
 <td><%=f.label(:classes) %>*</td>
-<td><%=f.select(:classe, ["Nursery","LKG","UKG","One","Two"], {:multiple=>true,  :prompt => "-select-"}) %></td>
+<td><%=f.select(:classe, ["Nursery","LKG","UKG","One","Two"], {:prompt => "-select-"}, { :multiple => true, :size => 5 }) %></td>
 </tr>
 
 

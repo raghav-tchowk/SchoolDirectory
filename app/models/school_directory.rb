@@ -9,13 +9,13 @@ class SchoolDirectory < ActiveRecord::Base
  #validates :email_id, :format => EMAIL_REGEX
 
  validates :mobile_no1, :length => { :maximum => 10 }, :format => /^[0-9]{10}$/
- #validates :mobile_no2, :format => /^[0-9]{10}$/
+ validates :mobile_no2, :format => /^[0-9]{10}$/, :length => { :maximum => 10}, :allow_nil  => true
 	validates :pincode, :length => { :maximum => 10 }
-	validates :landline_no1, :length => { :maximum => 12 }
-	#validates :landline_no2, :length => { :maximum => 12 }, :format => /^[0-9]$/
-	validates :fax_no1, :length => { :maximum => 12 }
-	#validates :fax_no2, :length => { :maximum => 12 }, :format => /^[0-9]$/
-	validates :established_year, :length => { :maximum => 4 }
+	validates :landline_no1, :length => {:minimum =>7, :maximum => 12 }
+	validates :landline_no2, :length => {:minimum =>7, :maximum => 12 }, :allow_nil  => true
+	validates :fax_no1, :length => {:minimum =>4, :maximum => 12 }
+	validates :fax_no2, :length => {:minimum =>4, :maximum => 12 }, :allow_nil  => true
+	validates :established_year, :length => {:minimum =>4, :maximum => 4 }
 
 end
 #i can't leave out the field if some validations are applied 
