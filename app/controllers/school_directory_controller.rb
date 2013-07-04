@@ -17,6 +17,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="a"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -29,6 +30,8 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="b"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
+    
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -41,6 +44,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="c"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -53,6 +57,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="d"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -65,6 +70,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="e"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -77,6 +83,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="f"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -89,6 +96,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="g"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -101,6 +109,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="h"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -113,6 +122,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="i"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -125,6 +135,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="j"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -137,6 +148,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="k"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -149,6 +161,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="l"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -161,6 +174,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="m"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -173,6 +187,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="n"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -185,6 +200,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="o"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -197,6 +213,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="p"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -209,6 +226,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="q"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -221,6 +239,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="r"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -233,6 +252,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="s"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -245,6 +265,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="t"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -257,6 +278,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="u"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -269,6 +291,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="v"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -281,6 +304,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="w"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -293,6 +317,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="x"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -305,6 +330,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="y"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
@@ -317,6 +343,7 @@ class SchoolDirectoryController < ApplicationController
    # @@tr=1
     @initial="z"
     @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
     #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
     #puts "rgv"
     #puts "to go to list click new school"
