@@ -1,0 +1,112 @@
+<% if !flash[:notice].to_i.blank? %>
+<div class="notice">
+<%= flash[:notice] %>
+</div>
+<% end -%>
+
+
+<div>
+<p>Sort by name Alphabetical Index</p>
+	<%=link_to("a", :action=>"a") %>
+	<%=link_to("b", :action=>"b") %>
+	<%=link_to("c", :action=>"c") %>
+	<%=link_to("d", :action=>"d") %>
+	<%=link_to("e", :action=>"e") %>
+	<%=link_to("f", :action=>"f") %>
+	<%=link_to("g", :action=>"g") %>
+	<%=link_to("h", :action=>"h") %>
+	<%=link_to("i", :action=>"i") %>
+	<%=link_to("j", :action=>"j") %>
+	<%=link_to("k", :action=>"k") %>
+	<%=link_to("i", :action=>"i") %>
+	<%=link_to("j", :action=>"j") %>
+	<%=link_to("k", :action=>"k") %>
+	<%=link_to("l", :action=>"l") %>
+	<%=link_to("m", :action=>"m") %>
+	<%=link_to("n", :action=>"n") %>
+	<%=link_to("o", :action=>"o") %>
+	<%=link_to("p", :action=>"p") %>
+	<%=link_to("q", :action=>"q") %>
+	<%=link_to("r", :action=>"r") %>
+	<%=link_to("s", :action=>"s") %>
+	<%=link_to("t", :action=>"t") %>
+	<%=link_to("u", :action=>"u") %>
+	<%=link_to("v", :action=>"v") %>
+	<%=link_to("w", :action=>"w") %>
+	<%=link_to("x", :action=>"x") %>
+	<%=link_to("y", :action=>"y") %>
+	<%=link_to("z", :action=>"z") %>
+</div>
+
+
+<div class="Schools list">
+<h2>Showing Schools with names from <%= "#{@initial}" %></h2>
+<table class="listing" summary="Schools list">
+<tr class="header">
+<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>School&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>Address Line1&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>Address Line1&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>City&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>State&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>Pincode&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>Webaddress&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>E-mail&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>Landline No&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>Alternate Landline No&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>Fax No&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>Alternate Fax No&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>Mobile No&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>Alternate Mobile No&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>Affiliated&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>Board&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>Established in&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>Class&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th>Medium&nbsp;&nbsp;&nbsp;&nbsp;</th>
+
+</tr>
+<% @schools.each do |school| %>
+
+<tr>
+<td><%=school.id%></td>
+<td><%=school.name%></td>
+<td class="center"><%=school.address_line1 %></td>
+<td class="center"><%=school.address_line2 %></td>
+<td class="center"><%=school.city %></td>
+<td class="center"><%=school.state %></td>
+<td class="center"><%=school.pincode %></td>
+<td class="center"><%=school.webaddress %></td>
+<td class="center"><%=school.email_id %></td>
+<td class="center"><%=school.landline_no1 %></td>
+<td class="center"><%=school.landline_no2 %></td>
+<td class="center"><%=school.fax_no1 %></td>
+<td class="center"><%=school.fax_no2 %></td>
+<td class="center"><%=school.mobile_no1 %></td>
+<td class="center"><%=school.mobile_no2 %></td>
+<td class="center"><%=school.affliated %></td>
+<td class="center"><%=school.affliated_to_board %></td>
+<td class="center"><%=school.established_year %></td>
+<td class="center"><%=school.classe %></td>
+<td class="center"><%=school.medium %></td>
+<td class="actions">
+
+	<%=link_to("Show", {:action=>"show", :id=>school.id}, :class=>"action show") %>
+<%= link_to("Edit", {:action=>"edit", :id=>school.id}, :class=>"action edit") %>
+<%= link_to("Delete", {:action=>"delete", :id=>school.id}, :class=>"action delete") %>
+
+
+
+</td>
+
+
+</tr>
+<% end %>
+</table>
+</div>
+
+<%= link_to("<<new school>>", {:action=>"new"}) %>
+<div>
+<% #if @@tr==1 %>
+<%= link_to("<<<Back to full list>>>", {:action=>"list"}, :class=>"back-links") %>
+<%#end%>
+</div>

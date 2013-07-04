@@ -1,4 +1,4 @@
-<%= link_to("<<back to list", {:action=>"list"}, :class=>"back-link") %>
+<%= link_to("<<back to full list", {:action=>"list"}, :class=>"back-link") %>
 <div class="school delete">
 <h2>Delete school</h2>
 <%= form_for(:school, :url=>{:action=>"destroy", :id=>@school.id}) do |f| %>

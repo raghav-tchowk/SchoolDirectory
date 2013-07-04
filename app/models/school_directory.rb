@@ -18,6 +18,11 @@ class SchoolDirectory < ActiveRecord::Base
 	validates :established_year, :length => {:minimum =>4, :maximum => 4 }
 
 end
-#i can't leave out the field if some validations are applied 
+#i can't leave out the field if some validations are applied => resolved using (, :allow_nil  => true)
 #<!--
-#<%= #how to add conditional table rows and data, how to make a multiple-select-dropdownmenu, how to display a range in reverse order %> -->
+#<%= #how to add conditional table rows and data, how to make a multiple-select-dropdownmenu => resolved using {:multiple=>true in new hash}, how to display a range in reverse order => resolved using <%h=(1600..2013).sort.reverse%> and then using h in f.select for range-->
+#git init
+#git add README.md
+#git commit -m "first commit"
+#git remote add origin https://github.com/raghav-tchowk/SchoolDirectory.git
+#git push -u origin master
