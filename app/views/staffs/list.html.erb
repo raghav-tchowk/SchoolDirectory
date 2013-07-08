@@ -1,0 +1,97 @@
+<% if !flash[:notice].to_i.blank? %>
+<div class="notice">
+<%= flash[:notice] %>
+</div>
+<% end -%>
+	
+	
+
+<div class="sdepts list">
+	<h2>Staffs</h2>
+
+
+	<table class="listing" summary="sdepts list">
+		<tr class="header">
+			<th></th>
+		<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>staff_category_id&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>staff_department_id&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>first_name&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>last_name&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>staff_number&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>joining_date&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>qualification&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>experience_detail&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>experience_year&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>date-of_birth&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>blood_group&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>home_address_line1&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>home_address_line2&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>home_city&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>home_state&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>home_pincode&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>home_phone1&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>home_phone2&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>mobile_no1&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>mobile_no2&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>email_id1&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>email_id2&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>marital_status&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>photo&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>last_position_held&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>moved_from&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>remarks&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>is_department_admin&nbsp;&nbsp;&nbsp;&nbsp;</th>
+
+		</tr>
+		<% @sdepts.each do |sdept| %>
+
+			<tr>
+				<td><%=sdept.id%></td>
+				<td class="center"><%=sdept.staff_category %></td>
+				<td class="center"><%=sdept.staff_department %></td>
+
+				<td><%=sdept.first_name%></td>
+				<td class="center"><%=sdept.last_name %></td>
+				<td class="center"><%=sdept.staff_number %></td>
+				<td class="center"><%=sdept.gender %></td>
+				<td class="center"><%=sdept.joining_date %></td>
+				<td class="center"><%=sdept.qualification %></td>
+				<td class="center"><%=sdept.experience_detail %></td>
+				<td class="center"><%=sdept.experience_year %></td>
+				<td class="center"><%=sdept.date_of_birth %></td>
+				<td class="center"><%=sdept.blood_group %></td>
+				<td class="center"><%=sdept.home_address_line1 %></td>
+				<td class="center"><%=sdept.home_address_line2 %></td>
+				<td class="center"><%=sdept.home_city %></td>
+				<td class="center"><%=sdept.home_state %></td>
+				<td class="center"><%=sdept.home_pincode %></td>
+				<td class="center"><%=sdept.home_phone1 %></td>	
+				<td class="center"><%=sdept.home_phone2 %></td>		
+				<td class="center"><%=sdept.mobile_no1 %></td>		
+				<td class="center"><%=sdept.mobile_no2 %></td>	
+				<td class="center"><%=sdept.email_id1 %></td>	
+				<td class="center"><%=sdept.email_id2 %></td>	
+				<td class="center"><%=sdept.marital_status %></td>	
+				<td class="center"><%=sdept.photo %></td>	
+				<td class="center"><%=sdept.last_position_held %></td>	
+				<td class="center"><%=sdept.moved_from %></td>	
+				<td class="center"><%=sdept.remarks	 %></td>	
+				<td class="center"><%=sdept.is_department_admin	 %></td>				
+
+					<%=link_to("Show", {:action=>"show", :id=>sdept.id}, :class=>"action show") %>
+				<%= link_to("Edit", {:action=>"edit", :id=>sdept.id}, :class=>"action edit") %>
+				<%= link_to("Delete", {:action=>"delete", :id=>sdept.id}, :class=>"action delete") %>
+
+
+
+				</td>
+
+
+			</tr>
+		<% end %>
+	</table>
+</div>
+
+<%= link_to("<<new sdept>>", {:action=>"new"}) %>
+

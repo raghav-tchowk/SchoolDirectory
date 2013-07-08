@@ -1,0 +1,26 @@
+<%= link_to("<<Back to full list", {:action=>"list"}, :class=>"back-links") %>
+<div class="staff new">
+<h2>Create staffs</h2>
+<%= form_for(:staff, :url=>{:action=>"create"}) do |f| %>
+
+
+
+
+	<%= render(:partial=>"tabletofill", :locals=>{:f=>f}) %>
+
+
+	<p> * fields marked with asterisk are compulsary fields</p>
+
+		<div class="form_buttons">
+
+		<%=submit_tag("Create staff") %>
+
+		</div>
+<% end -%>
+</div>
+
+<div id="errors" style="color:red">
+	<% @staff.errors.full_messages.each do |err| %>
+    	*<%= err %><br />
+    <% end %>
+</div>

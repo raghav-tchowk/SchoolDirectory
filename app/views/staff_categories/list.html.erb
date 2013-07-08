@@ -1,0 +1,48 @@
+<% if !flash[:notice].to_i.blank? %>
+<div class="notice">
+<%= flash[:notice] %>
+</div>
+<% end -%>
+	
+	
+<div class="Staffs list">
+	<h2>Staffs categories</h2>
+
+
+
+
+	<table class="listing" summary="Staffs list">
+		<tr class="header">
+		<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>Staff categories&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>description	&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>Status&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		
+
+		</tr>
+		<% @staffs.each do |staff| %>
+
+			<tr>
+				<td><%=staff.id%></td>
+				<td><%=staff.name%></td>
+				<td class="center"><%=staff.description %></td>
+				<td class="center"><%=staff.status %></td>
+				
+				<td class="actions">
+
+					<%=link_to("Show", {:action=>"show", :id=>staff.id}, :class=>"action show") %>
+				<%= link_to("Edit", {:action=>"edit", :id=>staff.id}, :class=>"action edit") %>
+				<%= link_to("Delete", {:action=>"delete", :id=>staff.id}, :class=>"action delete") %>
+
+
+
+				</td>
+
+
+			</tr>
+		<% end %>
+	</table>
+</div>
+
+<%= link_to("<<new staff>>", {:action=>"new"}) %>
+

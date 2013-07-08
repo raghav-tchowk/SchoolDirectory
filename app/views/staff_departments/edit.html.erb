@@ -1,0 +1,27 @@
+<h1>edit template</h1>
+<%= link_to("<<Back to list", {:action=>"list"}, :class=>"back-links") %>
+<div class="staff category Update">
+<h2>Update staff Departments</h2>
+<%= form_for(:scategory, :url=>{:action=>"update", :id=>@scategory.id}) do |f| %>
+
+
+<%= render(:partial=>"tabletofill", :locals=>{:f=>f}) %>
+
+
+
+<p> * fields marked with asterisk are compulsary fields</p>
+
+
+	<div class="form_buttons">
+
+	<%=submit_tag("Update Staff dept info") %>
+
+	</div>
+<% end -%>
+</div>
+
+<div id="errors" style="color:red">
+	<% @scategory.errors.full_messages.each do |err| %>
+    	*<%= err %><br />
+    <% end %>
+</div>

@@ -1,8 +1,5 @@
-class SchoolDirectoryController < ApplicationController
-  before_filter :index
-
-#@@tr
-  def index
+class SchoolDirectoriesController < ApplicationController
+	def index
     #@q=SchoolDirectory.search(params[:q])
     #@schools=@q.result()
     #@asearch=SchoolDirectory.search(params[:schools][:q])
@@ -25,7 +22,7 @@ class SchoolDirectoryController < ApplicationController
   def list
    # @schools=SchoolDirectory.all
     #@schools=SchoolDirectory.new(params[:schools])
-    Ransack::Search.new(SchoolDirectory)
+    #Ransack::Search.new(SchoolDirectory)
     @q=SchoolDirectory.search(params[:q])
     @schools=@q.result()
     #@initial

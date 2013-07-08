@@ -1,24 +1,24 @@
 School::Application.routes.draw do
 
-  root :to => 'school_directory#list'
+  root :to => 'school_directories#list'
 
-  get "school_directory/list"
+  get "school_directories/list"
 
-  get "school_directory/show"
+  get "school_directories/show"
 
-  get "school_directory/new"
+  get "school_directories/new"
 
-  get "school_directory/destroy"
+  get "school_directories/destroy"
 
-  get "school_directory/index"
+  get "school_directories/index"
 
-  get "school_directory/create"
+  get "school_directories/create"
 
-  get "school_directory/read"
+  get "school_directories/read"
 
-  get "school_directory/update"
+  get "school_directories/update"
 
-  get "school_directory/delete"
+  get "school_directories/delete"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
