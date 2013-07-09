@@ -44,6 +44,7 @@
 		<th>is_department_admin&nbsp;&nbsp;&nbsp;&nbsp;</th>
 
 		</tr>
+
 		<% @sdepts.each do |sdept| %>
 
 			<tr>
@@ -77,7 +78,8 @@
 				<td class="center"><%=sdept.last_position_held %></td>	
 				<td class="center"><%=sdept.moved_from %></td>	
 				<td class="center"><%=sdept.remarks	 %></td>	
-				<td class="center"><%=sdept.is_department_admin	 %></td>				
+				<td class="center"><%=sdept.is_department_admin	 %></td>		
+				<td>		
 
 					<%=link_to("Show", {:action=>"show", :id=>sdept.id}, :class=>"action show") %>
 				<%= link_to("Edit", {:action=>"edit", :id=>sdept.id}, :class=>"action edit") %>

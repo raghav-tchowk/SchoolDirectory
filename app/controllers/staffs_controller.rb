@@ -20,7 +20,7 @@ class StaffsController < ApplicationController
 	end
 
 	def create
-		@sdept.staff_department=StaffDepartment.new(params[:sdept])
+		@sdept=Staff.new(params[:sdept])
 		if @sdept.save
 		  flash[:notice]="sdept account created.  #{@sdept.first_name}"
 		  redirect_to(:action=>"show", :id=>@sdept.id)
