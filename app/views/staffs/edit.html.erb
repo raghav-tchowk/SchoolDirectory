@@ -1,7 +1,6 @@
-<h1>edit template</h1>
 <%= link_to("<<Back to list", {:action=>"list"}, :class=>"back-links") %>
 <div class="sdept Update">
-<h2>Update sdepts</h2>
+<h2>Update stafffs</h2>
 <%= form_for(:sdept, :url=>{:action=>"update", :id=>@sdept.id}) do |f| %>
 
 
@@ -14,7 +13,7 @@
 
 	<div class="form_buttons">
 
-	<%=submit_tag("Update sdept info") %>
+	<%=submit_tag("Update staff info") %>
 
 	</div>
 <% end -%>

@@ -17,7 +17,7 @@
 <td><%=f.label(:first_name) %>*</td>
 <td><%=f.text_field(:first_name) %></td>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><%=f.label(:last_name) %>*</td>
+<td><%=f.label(:last_name) %></td>
 <td><%=f.text_field(:last_name) %></td>
 </tr>
 
@@ -28,7 +28,7 @@
 
 <tr>
 <td><%=f.label(:gender) %>*</td>
-<td><%=f.text_field(:gender) %></td>
+<td><%=f.select(:gender, ["Male", "Female"], :prompt=>"-select-") %></td>
 </tr>
 
 <tr>
@@ -37,19 +37,20 @@
 </tr>
 <tr>
 <td><%=f.label(:qualification) %>*</td>
-<td><%=f.text_field(:qualification) %></td>
+<td><%=f.select(:qualification, ["Undergraduate","Graduate","Postgraduate"], :prompt=>"-select-") %></td>
 </tr>
 
 <tr>
-<td><%=f.label(:experience_detail) %>*</td>
+<td><%=f.label(:experience_detail) %></td>
 <td><%=f.text_area(:experience_detail) %></td>
 </tr>
 
 <tr>
 <td><%=f.label(:experience_year	) %>*</td>
-<td><%=f.text_field(:experience_year	) %></td>
+<% h=(1..100).sort %>
+<td><%=f.select(:experience_year, h	) %></td>
 </tr>
-
+<% ## %>
 <tr>
 <td><%=f.label(:date_of_birth) %>*</td>
 <td><%=f.date_select(:date_of_birth, options={:start_year=>1900}) %></td>
@@ -112,26 +113,26 @@
 
 <tr>
 <td><%=f.label(:marital_status) %>*</td>
-<td><%=f.text_field(:marital_status) %></td>
+<td><%=f.select(:marital_status, ["Bachelor","Married"], :prompt=>"-select-") %></td>
 </tr>
 
 <tr>
-<td><%=f.label(:photo) %>*</td>
-<td><%=f.text_field(:photo) %></td>
+<td><%=f.label(:photo) %></td>
+<td><%=f.text_area(:photo, :size=>"12*20") %></td>
 </tr>
 
 <tr>
-<td><%=f.label(:last_position_held) %>*</td>
+<td><%=f.label(:last_position_held) %></td>
 <td><%=f.text_field(:last_position_held) %></td>
 </tr>
 
 <tr>
-<td><%=f.label(:moved_from) %>*</td>
+<td><%=f.label(:moved_from) %></td>
 <td><%=f.text_field(:moved_from) %></td>
 </tr>
 
 <tr>
-<td><%=f.label(:remarks) %>*</td>
+<td><%=f.label(:remarks) %></td>
 <td><%=f.text_area(:remarks) %></td>
 </tr>
 

@@ -8,7 +8,7 @@
 
 
 
-<h1>Showing Record of <%=@sdept.first_name %> from sdeptDirectory</h1>
+<h1>Showing Record of <%=@sdept.first_name %> from staffs Directory</h1>
 <%= link_to("<<Back to full list", {:action=>"list"}, :class=>"back-links") %>
 <div class="sdept show">
 <!--<h2>Show sdepts</h2> -->
@@ -17,7 +17,7 @@
 
 <ul>
 
-	<li><b>staff_category_id</b>  <%=@sdept.staff_category%></li>
+	<li><b>staff_category_id</b>  <%=@sdept.staff_category_id%></li>
 <li><b>staff_department_id</b>  <%=@sdept.staff_department_id%></li>
 
 <li><b>ID</b> <%=@sdept.id%></li>

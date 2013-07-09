@@ -9,7 +9,7 @@
 
 
 <tr >
-<td><%=f.label(:departemnt_alias) %>*</td>
+<td><%=f.label(:department_alias) %>*</td>
 <td><%=f.text_area(:departemnt_alias, :size=>"50*5") %></td>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 
@@ -27,18 +27,15 @@
 
 
 <tr >
-<td><%=f.label(:status) %>*</td>
-<td><%=f.text_field(:status) %></td>
+<td><%=f.label(:remarks) %></td>
+<td><%=f.text_area(:remarks) %></td>
 </tr>
 
 
 <tr >
-<td><%=f.label(:remarks) %>*</td>
-<td><%=f.text_field(:remarks) %></td>
+<td><%=f.label(:status) %></td>
+<td><%=f.check_box(:status) %></td>
 </tr>
-
-
-
 
 
 </table>
