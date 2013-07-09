@@ -20,6 +20,8 @@ class StaffsController < ApplicationController
 	end
 
 	def create
+		#@wer=StaffCategory.find(1)
+		#@aaa=@wer.staffs
 		@sdept=Staff.new(params[:sdept])
 		if @sdept.save
 		  flash[:notice]="sdept account created.  #{@sdept.first_name}"
