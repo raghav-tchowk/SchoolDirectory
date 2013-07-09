@@ -3,11 +3,11 @@
 
 <tr >
 <td><%=f.label(:staff_category) %>*</td>
-<td><%=f.collection_select(:staff_category, StaffCategory.all, :id, :name, {prompt: lambda{|category| category.name }}) %></td>
+<td><%=f.collection_select(:staff_category_id, StaffCategory.all, :id, :name, {prompt: lambda{|category| category.name }}) %></td>
 <!-- collection_select(:post, :category_id, Category.all, :id, :name, {prompt: lambda{|category| category.archived? }}) -->
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 <td><%=f.label(:staff_department) %>*</td>
-<td><%=f.collection_select(:staff_department, StaffDepartment.all, :id, :name, {prompt: lambda{|category| category.name }}) %></td>
+<td><%=f.collection_select(:staff_department_id, StaffDepartment.all, :id, :name, {prompt: lambda{|category| category.name }}) %></td>
 </tr>
 
 
