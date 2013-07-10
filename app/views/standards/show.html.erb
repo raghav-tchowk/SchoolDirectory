@@ -1,0 +1,23 @@
+<% if !flash[:notice].to_i.blank? %>
+<div class="notice" style="color:green">
+<%= flash[:notice] %>
+</div>
+<% end -%>
+	
+	
+
+
+
+<h1>Showing Standard info <%=@note.name %></h1>
+<%= link_to("<<Back to full list", {:action=>"list"}, :class=>"back-links") %>
+<div class="notes list">
+	<ul>
+	<li><b>ID</b> <%=@note.id%></li>
+	<li><b>Standard</b>  <%=@note.name%></li>
+	<li class="center"><b>School ID</b>  <%=@note.school_id %></li>
+	
+	</ul>
+
+</div>
+
+<%= link_to("update>>", {:action=>"edit", :id=>@note.id}, :class=>"back-links") %>

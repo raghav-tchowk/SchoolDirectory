@@ -1,0 +1,2 @@
+module EmergencyAlertTypesHelper
+end

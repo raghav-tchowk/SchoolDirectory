@@ -1,0 +1,49 @@
+<% if !flash[:notice].to_i.blank? %>
+<div class="notice">
+<%= flash[:notice] %>
+</div>
+<% end -%>
+	
+	
+
+<div class="notes list">
+	<h2>Subjects list</h2>
+
+
+
+	<table class="listing" summary="notes list">
+		<tr class="header">
+		<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>Subject&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>Section_Id&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>mark&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>teacher&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		
+		</tr>
+		<% @notes.each do |note| %>
+
+			<tr>
+				<td><%=note.id%></td>
+				<td class="center"><%=note.name%></td>
+				<td class="center"><%=note.section_id %></td>
+				<td class="center"><%=note.mark %></td>
+				<td class="center"><%=note.teacher %></td>
+				
+				<td class="actions">
+
+					<%=link_to("Show", {:action=>"show", :id=>note.id}, :class=>"action show") %>
+				<%= link_to("Edit", {:action=>"edit", :id=>note.id}, :class=>"action edit") %>
+				<%= link_to("Delete", {:action=>"delete", :id=>note.id}, :class=>"action delete") %>
+
+
+
+				</td>
+
+
+			</tr>
+		<% end %>
+	</table>
+</div>
+
+<%= link_to("<<new Subject a/c>>", {:action=>"new"}) %>
+

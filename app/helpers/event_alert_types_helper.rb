@@ -1,0 +1,2 @@
+module EventAlertTypesHelper
+end

@@ -1,0 +1,26 @@
+<%= link_to("<<Back to list", {:action=>"list"}, :class=>"back-links") %>
+<div class="note Update">
+<h2>Update Alert info</h2>
+<%= form_for(:note, :url=>{:action=>"update", :id=>@note.id}) do |f| %>
+
+
+<%= render(:partial=>"form", :locals=>{:f=>f}) %>
+
+
+
+<p> * fields marked with asterisk are compulsary fields</p>
+
+
+	<div class="form_buttons">
+
+	<%=submit_tag("Update alert info") %>
+
+	</div>
+<% end -%>
+</div>
+
+<div id="errors" style="color:red">
+	<% @note.errors.full_messages.each do |err| %>
+    	*<%= err %><br />
+    <% end %>
+</div>

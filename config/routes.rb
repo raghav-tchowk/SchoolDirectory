@@ -1,5 +1,159 @@
 School::Application.routes.draw do
 
+  get "subjects/index"
+
+  get "subjects/list"
+
+  get "subjects/show"
+
+  get "subjects/new"
+
+  get "subjects/create"
+
+  get "subjects/edit"
+
+  get "subjects/update"
+
+  get "subjects/delete"
+
+  get "subjects/destroy"
+
+  get "exam_types/index"
+
+  get "exam_types/list"
+
+  get "exam_types/show"
+
+  get "exam_types/new"
+
+  get "exam_types/create"
+
+  get "exam_types/edit"
+
+  get "exam_types/update"
+
+  get "exam_types/delete"
+
+  get "exam_types/destroy"
+
+  get "event_alert_types/index"
+
+  get "event_alert_types/list"
+
+  get "event_alert_types/show"
+
+  get "event_alert_types/new"
+
+  get "event_alert_types/create"
+
+  get "event_alert_types/edit"
+
+  get "event_alert_types/update"
+
+  get "event_alert_types/delete"
+
+  get "event_alert_types/destroy"
+
+  get "emergency_alert_types/index"
+
+  get "emergency_alert_types/list"
+
+  get "emergency_alert_types/show"
+
+  get "emergency_alert_types/new"
+
+  get "emergency_alert_types/create"
+
+  get "emergency_alert_types/edit"
+
+  get "emergency_alert_types/update"
+
+  get "emergency_alert_types/delete"
+
+  get "emergency_alert_types/destroy"
+
+  get "comp_alert_types/index"
+
+  get "comp_alert_types/list"
+
+  get "comp_alert_types/show"
+
+  get "comp_alert_types/new"
+
+  get "comp_alert_types/create"
+
+  get "comp_alert_types/edit"
+
+  get "comp_alert_types/update"
+
+  get "comp_alert_types/delete"
+
+  get "comp_alert_types/destroy"
+
+  get "alert_type1s/index"
+
+  get "alert_type1s/list"
+
+  get "alert_type1s/show"
+
+  get "alert_type1s/new"
+
+  get "alert_type1s/create"
+
+  get "alert_type1s/edit"
+
+  get "alert_type1s/updatedelete"
+
+  get "alert_type1s/destroy"
+
+  get "sections/index"
+
+  get "sections/list"
+
+  get "sections/show"
+
+  get "sections/new"
+
+  get "sections/create"
+
+  get "sections/edit"
+
+  get "sections/updatedelete"
+
+  get "sections/destroy"
+
+  get "standards/index"
+
+  get "standards/list"
+
+  get "standards/show"
+
+  get "standards/new"
+
+  get "standards/create"
+
+  get "standards/edit"
+
+  get "standards/updatedelete"
+
+  get "standards/destroy"
+
+  get "boards/index"
+
+  get "boards/list"
+
+  get "boards/show"
+
+  get "boards/new"
+
+  get "boards/create"
+
+  get "boards/edit"
+
+  get "boards/updatedelete"
+
+  get "boards/destroy"
+
   root :to => 'school_directories#list'
 
   get "school_directories/list"

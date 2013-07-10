@@ -1,0 +1,2 @@
+module CompAlertTypesHelper
+end

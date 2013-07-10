@@ -11,7 +11,46 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130710065847) do
+ActiveRecord::Schema.define(:version => 20130710143847) do
+
+  create_table "alert_type1s", :force => true do |t|
+    t.string   "name"
+    t.string   "detail"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "boards", :force => true do |t|
+    t.string   "name"
+    t.string   "full_name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "comp_alert_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "emergency_alert_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "event_alert_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "exam_types", :force => true do |t|
+    t.string   "name"
+    t.string   "detail"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "school_directories", :force => true do |t|
     t.string   "name",               :limit => 45
@@ -35,6 +74,13 @@ ActiveRecord::Schema.define(:version => 20130710065847) do
     t.string   "medium",             :limit => 20
     t.datetime "created_at",                        :null => false
     t.datetime "updated_at",                        :null => false
+  end
+
+  create_table "sections", :force => true do |t|
+    t.string   "name"
+    t.integer  "standard_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "staff_categories", :force => true do |t|
@@ -90,6 +136,13 @@ ActiveRecord::Schema.define(:version => 20130710065847) do
     t.datetime "updated_at",          :null => false
   end
 
+  create_table "standards", :force => true do |t|
+    t.string   "name"
+    t.integer  "school_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "sticky_notes", :force => true do |t|
     t.string   "title"
     t.string   "subject"
@@ -98,6 +151,15 @@ ActiveRecord::Schema.define(:version => 20130710065847) do
     t.string   "priority"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "subjects", :force => true do |t|
+    t.string   "name"
+    t.integer  "section_id"
+    t.integer  "mark"
+    t.integer  "teacher"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
