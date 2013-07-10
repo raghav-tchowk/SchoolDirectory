@@ -1,0 +1,51 @@
+<% if !flash[:notice].to_i.blank? %>
+<div class="notice">
+<%= flash[:notice] %>
+</div>
+<% end -%>
+	
+	
+
+<div class="notes list">
+	<h2>notes</h2>
+
+
+
+	<table class="listing" summary="notes list">
+		<tr class="header">
+		<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>note title&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>Subject&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>Target Date&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>Remindar set&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>Priority&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		
+		</tr>
+		<% @notes.each do |note| %>
+
+			<tr>
+				<td><%=note.id%></td>
+				<td><%=note.title%></td>
+				<td class="center"><%=note.subject%></td>
+				<td class="center"><%=note.target_date %></td>
+				<td class="center"><%=note.remind_me %></td>
+				<td class="center"><%=note.priority %></td>
+				
+				<td class="actions">
+
+					<%=link_to("Show", {:action=>"show", :id=>note.id}, :class=>"action show") %>
+				<%= link_to("Edit", {:action=>"edit", :id=>note.id}, :class=>"action edit") %>
+				<%= link_to("Delete", {:action=>"delete", :id=>note.id}, :class=>"action delete") %>
+
+
+
+				</td>
+
+
+			</tr>
+		<% end %>
+	</table>
+</div>
+
+<%= link_to("<<new note>>", {:action=>"new"}) %>
+

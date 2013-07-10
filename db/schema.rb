@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130708091823) do
+ActiveRecord::Schema.define(:version => 20130710065847) do
 
   create_table "school_directories", :force => true do |t|
     t.string   "name",               :limit => 45
@@ -88,6 +88,16 @@ ActiveRecord::Schema.define(:version => 20130708091823) do
     t.boolean  "is_department_admin"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
+  end
+
+  create_table "sticky_notes", :force => true do |t|
+    t.string   "title"
+    t.string   "subject"
+    t.datetime "target_date"
+    t.boolean  "remind_me"
+    t.string   "priority"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end

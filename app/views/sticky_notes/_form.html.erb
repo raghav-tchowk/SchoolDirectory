@@ -1,0 +1,38 @@
+<table summary="Schools form fields">
+
+
+
+<tr >
+<td><%=f.label(:title) %>*</td>
+<td><%=f.text_field(:title) %></td>
+</tr>
+
+
+<tr >
+<td><%=f.label(:subject) %>*</td>
+<td><%=f.text_area(:subject, :size=>"50*5") %></td>
+</tr>
+
+
+<tr >
+<td><%=f.label(:target_date) %>*</td>
+<td><%=f.datetime_select(:target_date, options={:start_year=>Time.current.year}) %></td>
+</tr>
+
+
+<tr >
+<td><%=f.label(:remind_me) %></td>
+<td><%=f.check_box(:remind_me) %></td>
+</tr>
+
+
+<tr >
+<td><%=f.label(:priority) %>*</td>
+<td><%=f.select(:priority, ["HIGHEST", "High", "low"], :prompt=>"-select-") %></td>
+</tr>
+
+
+
+
+
+</table>
