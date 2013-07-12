@@ -107,3 +107,42 @@
 
 <%= link_to("<<new school>>", {:action=>"new"}) %>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<div>
+	<table style="border:2px solid black">
+		<th>Active Links</th>
+		
+		<tr>
+		<td><%=link_to("Boards", :controller=>"boards") %></td>
+		<td><%=link_to("Staff Departments ", :controller=>"staff_departments") %></td>
+		<td><%=link_to("Staff Categories", :controller=>"staff_categories") %></td>
+		</tr>
+		<tr>
+		<td><%=link_to("Staffs", :controller=>"staffs") %></td>
+		<td><%=link_to("Standards", :controller=>"standards") %></td>
+		<td><%=link_to("Sections", :controller=>"sections") %></td>
+		</tr>
+		<tr>
+		<td><%=link_to("Subjects", :controller=>"subjects") %></td>
+		<td><%=link_to("Exam types", :controller=>"exam_types") %></td>
+		<td><%=link_to("Sticky notes", :controller=>"sticky_notes") %></td>
+		</tr>
+		<tr>
+		<td><%=link_to("Emergency Alerts", :controller=>"emergency_alert_types") %></td>
+		<td><%=link_to("General Alerts", :controller=>"alert_type1s") %></td>
+		<td><%=link_to("Event alerts", :controller=>"event_alert_types") %></td>
+		</tr>
+		<td><%=link_to("Competition Alerts", :controller=>"comp_alert_types") %></td>
+	</ol>
+	</table>
+</div>
+
+		
