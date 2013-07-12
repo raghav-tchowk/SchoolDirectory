@@ -3,7 +3,7 @@ class CreateStickyNotes < ActiveRecord::Migration
     create_table :sticky_notes do |t|
     	t.string "title"
 		t.string "subject"
-		t.datetime "target_date"
+		t.date "target_date"
 		t.boolean "remind_me"
 		t.string "priority"
 

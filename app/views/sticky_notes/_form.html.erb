@@ -1,3 +1,4 @@
+
 <table summary="Schools form fields">
 
 
@@ -16,7 +17,9 @@
 
 <tr >
 <td><%=f.label(:target_date) %>*</td>
-<td><%=f.datetime_select(:target_date, options={:start_year=>Time.current.year}) %></td>
+<td><%=f.text_field(:target_date, :class=>"date") %>
+
+</td>
 </tr>
 
 
@@ -28,7 +31,7 @@
 
 <tr >
 <td><%=f.label(:priority) %>*</td>
-<td><%=f.select(:priority, ["HIGHEST", "High", "low"], :prompt=>"-select-") %></td>
+<td><%=f.select(:priority, ["ABOVE ALL", "HIGH", "LOW"], :prompt=>"-select-") %></td>
 </tr>
 
 

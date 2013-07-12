@@ -20,8 +20,16 @@
 		<th>Remindar set&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		<th>Priority&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		
+
+
+		<!-- #@user.occasions.sort {|a,b| b.dateg <=> a.dateg }.each do |o| -->
+
+
+
+
+
 		</tr>
-		<% @notes.each do |note| %>
+		<% @notes.order("target_date ASC").order("priority ASC").order("remind_me DESC").each do |note| %>
 
 			<tr>
 				<td><%=note.id%></td>

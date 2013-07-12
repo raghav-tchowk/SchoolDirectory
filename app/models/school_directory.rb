@@ -26,3 +26,16 @@ end
 #git commit -m "first commit"
 #git remote add origin https://github.com/raghav-tchowk/SchoolDirectory.git
 #git push -u origin master
+
+
+
+
+
+
+
+
+
+
+
+#http://gregdev.com.au/jquery/automatically-add-a-jquery-date-picker-to-an-input-box-with-a-specific-class/
+#above is a source for adding jquery calender

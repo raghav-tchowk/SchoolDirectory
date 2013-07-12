@@ -7,7 +7,9 @@ class StickyNotesController < ApplicationController
 
 
   def list
-    @notes=StickyNote.all
+    #@notes=StickyNote.all
+
+    #@notes=StickyNote.order("priority ["HIGHEST", "High", "low"]")
     @q=StickyNote.search(params[:q])
     @notes=@q.result()
   end
