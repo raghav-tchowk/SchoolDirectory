@@ -1,11 +1,11 @@
-<%= link_to("<<back to full list", {:action=>"list"}, :class=>"back-link") %>
-<div class="staff delete">
+<%= link_to("<<back to full list", {:action=>"list"}) %>
+<div>
 <h2>Deleting staff categories</h2>
 <%= form_for(:staff, :url=>{:action=>"destroy", :id=>@staff.id} ) do |f| %>
 <p>Are u sure u wanna delete this staff categories?</p>
-<p class="reference-name"><%=@staff.name%></p>
+<p><%=@staff.name%></p>
 
-<div class="form-buttons">
+<div>
 <%= submit_tag("Delete staff category a/c") %>
 </div>
 <% end -%>

@@ -1,5 +1,5 @@
 <% if !flash[:notice].to_i.blank? %>
-<div class="notice" style="color:blue">
+<div style="color:blue">
 <%= flash[:notice] %>
 </div>
 <% end -%>
@@ -9,11 +9,9 @@
 
 
 <h1>Showing Record of <%=@sdept.first_name %> from staffs Directory</h1>
-<%= link_to("<<Back to full list", {:action=>"list"}, :class=>"back-links") %>
-<div class="sdept show">
-<!--<h2>Show sdepts</h2> -->
-<div class="sdepts list">
-<!--<h2>sdepts</h2>-->
+<%= link_to("<<Back to full list", {:action=>"list"}) %>
+<div>
+<div>
 
 <ul>
 
@@ -23,35 +21,35 @@
 <li><b>ID</b> <%=@sdept.id%></li>
 <li><b>first name</b>  <%=@sdept.first_name%></li>
 
-<li class="center"><b>last_name</b>  <%=@sdept.last_name %></li>
-<li class="center"><b>staff_number</b>  <%=@sdept.staff_number %></li>
-<li class="center"><b>gender</b>  <%=@sdept.gender %></li>
-<li class="center"><b>joining_date</b>  <%=@sdept.joining_date %></li>
-<li class="center"><b>qualification</b>  <%=@sdept.qualification %></li>
-<li class="center"><b>experience_detail</b>  <%=@sdept.experience_detail %></li>
-<li class="center"><b>experience_year</b>  <%=@sdept.experience_year %></li>
-<li class="center"><b>date_of_birth</b>  <%=@sdept.date_of_birth %></li>
-<li class="center"><b>blood_group</b>  <%=@sdept.blood_group %></li>
-<li class="center"><b>home_address_line1</b>  <%=@sdept.home_address_line1 %></li>
-<li class="center"><b>home_address_line2</b>  <%=@sdept.home_address_line2 %></li>
-<li class="center"><b>home_city</b>  <%=@sdept.home_city %></li>
-<li class="center"><b>home_state</b>  <%=@sdept.home_state %></li>
-<li class="center"><b>home_pincode</b>  <%=@sdept.home_pincode %></li>
-<li class="center"><b>home_phone1</b>  <%=@sdept.home_phone1 %></li>
-<li class="center"><b>home_phone2</b>  <%=@sdept.home_phone2 %></li>
-<li class="center"><b>mobile_no1</b>  <%=@sdept.mobile_no1 %></li>
-<li class="center"><b>mobile_no2</b>  <%=@sdept.mobile_no2 %></li>
-<li class="center"><b>email_id1</b>  <%=@sdept.email_id1 %></li>
-<li class="center"><b>email_id2</b>  <%=@sdept.email_id2 %></li>
-<li class="center"><b>marital_status</b>  <%=@sdept.marital_status %></li>
-<li class="center"><b>photo</b>  <%=@sdept.photo %></li>
-<li class="center"><b>last_position_held</b>  <%=@sdept.last_position_held %></li>
-<li class="center"><b>moved_from</b>  <%=@sdept.moved_from %></li>
-<li class="center"><b>remarks</b>  <%=@sdept.remarks %></li>
-<li class="center"><b>is_department_admin</b>  <%=@sdept.is_department_admin %></li>
+<li><b>last_name</b>  <%=@sdept.last_name %></li>
+<li><b>staff_number</b>  <%=@sdept.staff_number %></li>
+<li><b>gender</b>  <%=@sdept.gender %></li>
+<li><b>joining_date</b>  <%=@sdept.joining_date %></li>
+<li><b>qualification</b>  <%=@sdept.qualification %></li>
+<li><b>experience_detail</b>  <%=@sdept.experience_detail %></li>
+<li><b>experience_year</b>  <%=@sdept.experience_year %></li>
+<li><b>date_of_birth</b>  <%=@sdept.date_of_birth %></li>
+<li><b>blood_group</b>  <%=@sdept.blood_group %></li>
+<li><b>home_address_line1</b>  <%=@sdept.home_address_line1 %></li>
+<li><b>home_address_line2</b>  <%=@sdept.home_address_line2 %></li>
+<li><b>home_city</b>  <%=@sdept.home_city %></li>
+<li><b>home_state</b>  <%=@sdept.home_state %></li>
+<li><b>home_pincode</b>  <%=@sdept.home_pincode %></li>
+<li><b>home_phone1</b>  <%=@sdept.home_phone1 %></li>
+<li><b>home_phone2</b>  <%=@sdept.home_phone2 %></li>
+<li><b>mobile_no1</b>  <%=@sdept.mobile_no1 %></li>
+<li><b>mobile_no2</b>  <%=@sdept.mobile_no2 %></li>
+<li><b>email_id1</b>  <%=@sdept.email_id1 %></li>
+<li><b>email_id2</b>  <%=@sdept.email_id2 %></li>
+<li><b>marital_status</b>  <%=@sdept.marital_status %></li>
+<li><b>photo</b>  <%=@sdept.photo %></li>
+<li><b>last_position_held</b>  <%=@sdept.last_position_held %></li>
+<li><b>moved_from</b>  <%=@sdept.moved_from %></li>
+<li><b>remarks</b>  <%=@sdept.remarks %></li>
+<li><b>is_department_admin</b>  <%=@sdept.is_department_admin %></li>
 
 </ul>
 
 </div>
 
-<%= link_to("update>>", {:action=>"edit", :id=>@sdept.id}, :class=>"back-links") %>
+<%= link_to("update>>", {:action=>"edit", :id=>@sdept.id}) %>

@@ -1,6 +1,6 @@
 <h1>edit template</h1>
-<%= link_to("<<Back to list", {:action=>"list"}, :class=>"back-links") %>
-<div class="school Update">
+<%= link_to("<<Back to list", {:action=>"list"}) %>
+<div>
 <h2>Update schools</h2>
 <%= form_for(:school, :url=>{:action=>"update", :id=>@school.id}) do |f| %>
 
@@ -12,7 +12,7 @@
 <p> * fields marked with asterisk are compulsary fields</p>
 
 
-	<div class="form_buttons">
+	<div>
 
 	<%=submit_tag("Update school info") %>
 
@@ -20,7 +20,7 @@
 <% end -%>
 </div>
 
-<div id="errors" style="color:red">
+<div style="color:red">
 	<% @school.errors.full_messages.each do |err| %>
     	*<%= err %><br />
     <% end %>

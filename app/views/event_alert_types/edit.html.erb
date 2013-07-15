@@ -1,5 +1,5 @@
-<%= link_to("<<Back to list", {:action=>"list"}, :class=>"back-links") %>
-<div class="note Update">
+<%= link_to("<<Back to list", {:action=>"list"}) %>
+<div >
 <h2>Update Event Alert info</h2>
 <%= form_for(:note, :url=>{:action=>"update", :id=>@note.id}) do |f| %>
 
@@ -11,7 +11,7 @@
 <p> * fields marked with asterisk are compulsary fields</p>
 
 
-	<div class="form_buttons">
+	<div>
 
 	<%=submit_tag("Update Event Alert info") %>
 
@@ -19,7 +19,7 @@
 <% end -%>
 </div>
 
-<div id="errors" style="color:red">
+<div style="color:red">
 	<% @note.errors.full_messages.each do |err| %>
     	*<%= err %><br />
     <% end %>

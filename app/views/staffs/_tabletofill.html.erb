@@ -33,7 +33,7 @@
 
 <tr>
 <td><%=f.label(:joining_date) %>*</td>
-<td><%=f.date_select(:joining_date) %></td>
+<td><%=f.text_field(:joining_date, :class=>"date") %></td>
 </tr>
 <tr>
 <td><%=f.label(:qualification) %>*</td>
@@ -137,7 +137,7 @@
 </tr>
 
 <tr>
-<td><%=f.label(:is_department_admin) %>*</td>
+<td><%=f.label(:is_department_admin) %></td>
 <td><%=f.check_box(:is_department_admin) %></td>
 </tr>
 

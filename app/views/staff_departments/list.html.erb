@@ -1,20 +1,20 @@
 <% if !flash[:notice].to_i.blank? %>
-<div class="notice" style="color:green">
+<div style="color:green">
 <%= flash[:notice] %>
 </div>
 <% end -%>
 	
 	
 
-<div class="Staff categories list">
+<div>
 	<h2>Staff Departments</h2>
 
 
 	
 
 
-	<table class="listing" summary="scategorys list">
-		<tr class="header">
+	<table summary="scategorys list">
+		<tr>
 		<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		<th>staff department&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		<th>department_alias&nbsp;&nbsp;&nbsp;&nbsp;</th>
@@ -29,17 +29,17 @@
 			<tr>
 				<td><%=scategory.id%></td>
 				<td><%=scategory.name%></td>
-				<td class="center"><%=scategory.departemnt_alias%></td>
-				<td class="center"><%=scategory.department_code %></td>
-				<td class="center"><%=scategory.description %></td>
-				<td class="center"><%=scategory.status %></td>
-				<td class="center"><%=scategory.remarks %></td>
+				<td><%=scategory.departemnt_alias%></td>
+				<td><%=scategory.department_code %></td>
+				<td><%=scategory.description %></td>
+				<td><%=scategory.status %></td>
+				<td><%=scategory.remarks %></td>
 				
-				<td class="actions">
+				<td>
 
-					<%=link_to("Show", {:action=>"show", :id=>scategory.id}, :class=>"action show") %>
-					<%= link_to("Edit", {:action=>"edit", :id=>scategory.id}, :class=>"action edit") %>
-					<%= link_to("Delete", {:action=>"delete", :id=>scategory.id}, :class=>"action delete") %>
+					<%=link_to("Show", {:action=>"show", :id=>scategory.id}) %>
+					<%= link_to("Edit", {:action=>"edit", :id=>scategory.id}) %>
+					<%= link_to("Delete", {:action=>"delete", :id=>scategory.id}) %>
 				</td>
 			</tr>
 		<% end %>

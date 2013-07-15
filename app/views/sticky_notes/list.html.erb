@@ -1,18 +1,18 @@
 <% if !flash[:notice].to_i.blank? %>
-<div class="notice">
+<div>
 <%= flash[:notice] %>
 </div>
 <% end -%>
 	
 	
 
-<div class="notes list">
+<div>
 	<h2>Sticky notes</h2>
 
 
 
-	<table class="listing" summary="notes list">
-		<tr class="header">
+	<table summary="notes list">
+		<tr>
 		<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		<th>note title&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		<th>Subject&nbsp;&nbsp;&nbsp;&nbsp;</th>
@@ -34,16 +34,16 @@
 			<tr>
 				<td><%=note.id%></td>
 				<td><%=note.title%></td>
-				<td class="center"><%=note.subject%></td>
-				<td class="center"><%=note.target_date %></td>
-				<td class="center"><%=note.remind_me %></td>
-				<td class="center"><%=note.priority %></td>
+				<td><%=note.subject%></td>
+				<td><%=note.target_date %></td>
+				<td><%=note.remind_me %></td>
+				<td><%=note.priority %></td>
 				
-				<td class="actions">
+				<td>
 
-					<%=link_to("Show", {:action=>"show", :id=>note.id}, :class=>"action show") %>
-				<%= link_to("Edit", {:action=>"edit", :id=>note.id}, :class=>"action edit") %>
-				<%= link_to("Delete", {:action=>"delete", :id=>note.id}, :class=>"action delete") %>
+					<%=link_to("Show", {:action=>"show", :id=>note.id}) %>
+				<%= link_to("Edit", {:action=>"edit", :id=>note.id}) %>
+				<%= link_to("Delete", {:action=>"delete", :id=>note.id}) %>
 
 
 

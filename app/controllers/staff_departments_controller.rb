@@ -9,22 +9,6 @@ class StaffDepartmentsController < ApplicationController
 	    
 	end
 
-	def a
-		# @@tr=1
-		@initial=params[:x]
-		@scategories=StaffDepartment.where(["name LIKE ?", "#{@initial}%"])
-		@number=StaffDepartment.where(["name LIKE ?", "#{@initial}%"]).count
-		#@scategorys=StaffDepartment.where(["name LIKE ?", "r%"])
-		#puts "rgv"
-		#puts "to go to list click new scategory"
-		#render("list")
-		#link_to("<<Back to list", {:action=>"list"}, :class=>"back-links")
-		render("listfew")
-	end
-
-          
-
-
 
 	def show
 		@scategory=StaffDepartment.find(params[:id])

@@ -1,18 +1,18 @@
 <% if !flash[:notice].to_i.blank? %>
-<div class="notice">
+<div>
 <%= flash[:notice] %>
 </div>
 <% end -%>
 	
 	
 
-<div class="notes list">
+<div>
 	<h2>Alerts list</h2>
 
 
 
-	<table class="listing" summary="notes list">
-		<tr class="header">
+	<table summary="notes list">
+		<tr>
 		<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		<th>Alert&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		<th>Details&nbsp;&nbsp;&nbsp;&nbsp;</th>
@@ -23,13 +23,13 @@
 			<tr>
 				<td><%=note.id%></td>
 				<td><%=note.name%></td>
-				<td class="center"><%=note.detail%></td>
+				<td><%=note.detail%></td>
 				
-				<td class="actions">
+				<td>
 
-					<%=link_to("Show", {:action=>"show", :id=>note.id}, :class=>"action show") %>
-				<%= link_to("Edit", {:action=>"edit", :id=>note.id}, :class=>"action edit") %>
-				<%= link_to("Delete", {:action=>"delete", :id=>note.id}, :class=>"action delete") %>
+					<%=link_to("Show", {:action=>"show", :id=>note.id}) %>
+				<%= link_to("Edit", {:action=>"edit", :id=>note.id}) %>
+				<%= link_to("Delete", {:action=>"delete", :id=>note.id}) %>
 
 
 

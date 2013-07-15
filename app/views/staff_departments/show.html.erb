@@ -1,5 +1,5 @@
 <% if !flash[:notice].to_i.blank? %>
-<div class="notice" style="color:blue">
+<div style="color:blue">
 <%= flash[:notice] %>
 </div>
 <% end -%>
@@ -9,23 +9,21 @@
 
 
 <h1>Showing Record of <%=@scategory.name %> from staff department</h1>
-<%= link_to("<<Back to full list", {:action=>"list"}, :class=>"back-links") %>
-<div class="scategory show">
-<!--<h2>Show staff categories</h2> -->
-<div class="scategorys list">
-<!--<h2>scategorys</h2>-->
+<%= link_to("<<Back to full list", {:action=>"list"}) %>
+<div>
+<div>
 
 <ul>
 <li><b>ID</b> <%=@scategory.id%></li>
 <li><b>name</b>  <%=@scategory.name%></li>
-<li class="center"><b>department_alias</b>  <%=@scategory.departemnt_alias %></li>
-<li class="center"><b>department_code</b>  <%=@scategory.department_code %></li>
-<li class="center"><b>description</b>  <%=@scategory.description %></li>
-<li class="center"><b>status</b>  <%=@scategory.status %></li>
-<li class="center"><b>remarks</b>  <%=@scategory.remarks %></li>
+<li><b>department_alias</b>  <%=@scategory.departemnt_alias %></li>
+<li><b>department_code</b>  <%=@scategory.department_code %></li>
+<li><b>description</b>  <%=@scategory.description %></li>
+<li><b>status</b>  <%=@scategory.status %></li>
+<li><b>remarks</b>  <%=@scategory.remarks %></li>
 
 </ul>
 
 </div>
 
-<%= link_to("update>>", {:action=>"edit", :id=>@scategory.id}, :class=>"back-links") %>
+<%= link_to("update>>", {:action=>"edit", :id=>@scategory.id}) %>

@@ -1,52 +1,22 @@
 class SchoolDirectoriesController < ApplicationController
 	def index
-    #@q=SchoolDirectory.search(params[:q])
-    #@schools=@q.result()
-    #@asearch=SchoolDirectory.search(params[:schools][:q])
-    #@schools=@asearch.result(:distinct => true)
-       # @schools=SchoolDirectory.all
-
     list
     render("list")
   end
 
 
-
-#def set_search
-#@search=Product.search(params[:q])
-#end
-
-
-
-
   def list
-   # @schools=SchoolDirectory.all
-    #@schools=SchoolDirectory.new(params[:schools])
-    #Ransack::Search.new(SchoolDirectory)
+    @schools=SchoolDirectory.all
     @q=SchoolDirectory.search(params[:q])
     @schools=@q.result()
-    #@initial
-    #@schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
-    #all(:limit=>3, :offset=>6, :order=>"name ASC", :conditions => "name LIKE 'g%'")
-    #Spec.find(:all, :conditions => "last_name LIKE '#{initial}%'",
   end
 
-          def a
-           # @@tr=1
-            @initial=params[:x]
-            @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
-            @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
-            #@schools=SchoolDirectory.where(["name LIKE ?", "r%"])
-            #puts "rgv"
-            #puts "to go to list click new school"
-            #render("list")
-            #link_to("<<Back to list", {:action=>"list"}, :class=>"back-links")
-            render("listfew")
-          end
-
-          
-
-
+  def a
+    @initial=params[:x]
+    @schools=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"])
+    @number=SchoolDirectory.where(["name LIKE ?", "#{@initial}%"]).count
+    render("listfew")
+  end
 
   def show
     @school=SchoolDirectory.find(params[:id])
