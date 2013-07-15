@@ -1,12 +1,12 @@
 <%= link_to("<<Back to list", {:action=>"list"}) %>
 <div>
-	<h2>Update staff categories</h2>
+	<h2>Update scat categories</h2>
 
-	<%= form_for(:staff, :url=>{:action=>
-		"update", :id=>@staff.id} ) do |f| %>
+	<%= form_for(:scat, :url=>{:action=>
+		"update", :id=>@scat.id} ) do |f| %>
 
 
-	<%= render(:partial=>"tabletofill", :locals=>{:f=>f}) %>
+	<%= render(:partial=>"form", :locals=>{:f=>f}) %>
 
 
 
@@ -15,14 +15,14 @@
 
 	<div>
 
-	<%=submit_tag("Update staff category info") %>
+	<%=submit_tag("Update scat category info") %>
 
 	</div>
 <% end -%>
 </div>
 
 <div style="color:red">
-	<% @staff.errors.full_messages.each do |err| %>
+	<% @scat.errors.full_messages.each do |err| %>
     	*<%= err %><br />
     <% end %>
 </div>

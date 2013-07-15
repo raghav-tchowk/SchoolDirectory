@@ -1,7 +1,7 @@
 <%= link_to("<<Back to list", {:action=>"list"}) %>
 <div >
 <h2>Update Event Alert info</h2>
-<%= form_for(:note, :url=>{:action=>"update", :id=>@note.id}) do |f| %>
+<%= form_for(:evalert, :url=>{:action=>"update", :id=>@evalert.id}) do |f| %>
 
 
 <%= render(:partial=>"form", :locals=>{:f=>f}) %>
@@ -20,7 +20,7 @@
 </div>
 
 <div style="color:red">
-	<% @note.errors.full_messages.each do |err| %>
+	<% @evalert.errors.full_messages.each do |err| %>
     	*<%= err %><br />
     <% end %>
 </div>

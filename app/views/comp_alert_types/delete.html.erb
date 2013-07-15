@@ -1,9 +1,9 @@
 <%= link_to("<<back to full list", {:action=>"list"}) %>
 <div>
 <h2>Delete Competition Alert</h2>
-<%= form_for(:note, :url=>{:action=>"destroy", :id=>@note.id}) do |f| %>
+<%= form_for(:comalert, :url=>{:action=>"destroy", :id=>@comalert.id}) do |f| %>
 <p>Are u sure u wanna delete this Competition Alert?</p>
-<p><%=@note.name%></p>
+<p><%=@comalert.name%></p>
 
 <div>
 <%= submit_tag("Delete Competition Alert") %>

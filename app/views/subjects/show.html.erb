@@ -8,17 +8,17 @@
 
 
 
-<h1>Showing Subject <%=@note.name %></h1>
+<h1>Showing Subject <%=@sub.name %></h1>
 <%= link_to("<<Back to full list", {:action=>"list"}) %>
 <div>
 	<ul>
-	<li><b>ID</b> <%=@note.id%></li>
-	<li><b>Subject</b>  <%=@note.name %></li>
-	<li><b>Section id</b>  <%=@note.section_id %></li>
-	<li><b>mark id</b>  <%=@note.mark %></li>
-	<li><b>teacher id</b>  <%=@note.teacher %></li>
+	<li><b>ID</b> <%=@sub.id%></li>
+	<li><b>Subject</b>  <%=@sub.name %></li>
+	<li><b>Section id</b>  <%=@sub.section_id %></li>
+	<li><b>mark id</b>  <%=@sub.mark %></li>
+	<li><b>teacher id</b>  <%=@sub.teacher %></li>
 	</ul>
 
 </div>
 
-<%= link_to("update>>", {:action=>"edit", :id=>@note.id}) %>
+<%= link_to("update>>", {:action=>"edit", :id=>@sub.id}) %>

@@ -1,9 +1,9 @@
 <%= link_to("<<back to full list", {:action=>"list"}) %>
 <div>
 <h2>Delete Subject account</h2>
-<%= form_for(:note, :url=>{:action=>"destroy", :id=>@note.id}) do |f| %>
+<%= form_for(:sub, :url=>{:action=>"destroy", :id=>@sub.id}) do |f| %>
 <p>Are u sure u wanna delete this Subject a/c?</p>
-<p><%=@note.name%></p>
+<p><%=@sub.name%></p>
 
 <div>
 <%= submit_tag("Delete Subject account") %>

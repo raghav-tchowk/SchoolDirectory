@@ -11,25 +11,25 @@
 
 
 
-	<table summary="notes list">
+	<table summary="emalerts list">
 		<tr>
 		<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		<th>Emergency Alert&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		
 		
 		</tr>
-		<% @notes.each do |note| %>
+		<% @emalerts.each do |emalert| %>
 
 			<tr>
-				<td><%=note.id%></td>
-				<td><%=note.name%></td>
+				<td><%=emalert.id%></td>
+				<td><%=emalert.name%></td>
 				
 				
 				<td>
 
-					<%=link_to("Show", {:action=>"show", :id=>note.id}) %>
-				<%= link_to("Edit", {:action=>"edit", :id=>note.id}) %>
-				<%= link_to("Delete", {:action=>"delete", :id=>note.id}) %>
+					<%=link_to("Show", {:action=>"show", :id=>emalert.id}) %>
+				<%= link_to("Edit", {:action=>"edit", :id=>emalert.id}) %>
+				<%= link_to("Delete", {:action=>"delete", :id=>emalert.id}) %>
 
 
 

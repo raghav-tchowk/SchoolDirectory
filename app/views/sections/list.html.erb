@@ -11,26 +11,26 @@
 
 
 
-	<table summary="notes list">
+	<table summary="sects list">
 		<tr>
 		<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		<th>Section&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		<th>Standard ID&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		
 		</tr>
-		<% @notes.each do |note| %>
+		<% @sects.each do |sect| %>
 
 			<tr>
-				<td><%=note.id%></td>
-				<td><%=note.name%></td>
-				<td><%=note.standard_id%></td>
+				<td><%=sect.id%></td>
+				<td><%=sect.name%></td>
+				<td><%=sect.standard_id%></td>
 				
 				
 				<td>
 
-					<%=link_to("Show", {:action=>"show", :id=>note.id}) %>
-				<%= link_to("Edit", {:action=>"edit", :id=>note.id}) %>
-				<%= link_to("Delete", {:action=>"delete", :id=>note.id}) %>
+					<%=link_to("Show", {:action=>"show", :id=>sect.id}) %>
+				<%= link_to("Edit", {:action=>"edit", :id=>sect.id}) %>
+				<%= link_to("Delete", {:action=>"delete", :id=>sect.id}) %>
 
 
 

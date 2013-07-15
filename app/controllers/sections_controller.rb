@@ -7,27 +7,27 @@ class SectionsController < ApplicationController
 
 
   def list
-    @notes=Section.all
+    @sects=Section.all
     @q=Section.search(params[:q])
-    @notes=@q.result()
+    @sects=@q.result()
   end
 
 
   def show
-    @note=Section.find(params[:id])
+    @sect=Section.find(params[:id])
   end
 
 
   def new
-    @note =Section.new
+    @sect =Section.new
   end
 
 
   def create
-    @note =Section.new(params[:note])
-    if @note.save
-      flash[:notice]="Section a/c #{@note.name} created. "
-      redirect_to(:action=>"show", :id=>@note.id)
+    @sect =Section.new(params[:sect])
+    if @sect.save
+      flash[:notice]="Section a/c #{@sect.name} created. "
+      redirect_to(:action=>"show", :id=>@sect.id)
     else
       render("new")
     end
@@ -35,15 +35,15 @@ class SectionsController < ApplicationController
 
 
   def edit
-    @note=Section.find(params[:id])
+    @sect=Section.find(params[:id])
   end 
 
 
   def update
-    @note=Section.find(params[:id])
-    if @note.update_attributes(params[:note])
-      flash[:notice]="Section account #{@note.name} info updated."
-      redirect_to(:action=>"show", :id=>@note.id)    
+    @sect=Section.find(params[:id])
+    if @sect.update_attributes(params[:sect])
+      flash[:notice]="Section account #{@sect.name} info updated."
+      redirect_to(:action=>"show", :id=>@sect.id)    
     else
       render("edit")
     end
@@ -51,7 +51,7 @@ class SectionsController < ApplicationController
 
 
   def delete
-    @note=Section.find(params[:id])
+    @sect=Section.find(params[:id])
   end
 
 

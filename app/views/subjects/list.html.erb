@@ -11,7 +11,7 @@
 
 
 
-	<table summary="notes list">
+	<table summary="subs list">
 		<tr>
 		<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		<th>Subject&nbsp;&nbsp;&nbsp;&nbsp;</th>
@@ -20,20 +20,20 @@
 		<th>teacher&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		
 		</tr>
-		<% @notes.each do |note| %>
+		<% @subs.each do |sub| %>
 
 			<tr>
-				<td><%=note.id%></td>
-				<td><%=note.name%></td>
-				<td><%=note.section_id %></td>
-				<td><%=note.mark %></td>
-				<td><%=note.teacher %></td>
+				<td><%=sub.id%></td>
+				<td><%=sub.name%></td>
+				<td><%=sub.section_id %></td>
+				<td><%=sub.mark %></td>
+				<td><%=sub.teacher %></td>
 				
 				<td>
 
-					<%=link_to("Show", {:action=>"show", :id=>note.id}) %>
-				<%= link_to("Edit", {:action=>"edit", :id=>note.id}) %>
-				<%= link_to("Delete", {:action=>"delete", :id=>note.id}) %>
+					<%=link_to("Show", {:action=>"show", :id=>sub.id}) %>
+				<%= link_to("Edit", {:action=>"edit", :id=>sub.id}) %>
+				<%= link_to("Delete", {:action=>"delete", :id=>sub.id}) %>
 
 
 

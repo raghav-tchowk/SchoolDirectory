@@ -7,27 +7,27 @@ class ExamTypesController < ApplicationController
 
 
   def list
-    @notes=ExamType.all
+    @extypes=ExamType.all
     @q=ExamType.search(params[:q])
-    @notes=@q.result()
+    @extypes=@q.result()
   end
 
 
   def show
-    @note=ExamType.find(params[:id])
+    @extype=ExamType.find(params[:id])
   end
 
 
   def new
-    @note =ExamType.new
+    @extype =ExamType.new
   end
 
 
   def create
-    @note =ExamType.new(params[:note])
-    if @note.save
-      flash[:notice]="Exam type #{@note.name} created. "
-      redirect_to(:action=>"show", :id=>@note.id)
+    @extype =ExamType.new(params[:extype])
+    if @extype.save
+      flash[:notice]="Exam type #{@extype.name} created. "
+      redirect_to(:action=>"show", :id=>@extype.id)
     else
       render("new")
     end
@@ -35,15 +35,15 @@ class ExamTypesController < ApplicationController
 
 
   def edit
-    @note=ExamType.find(params[:id])
+    @extype=ExamType.find(params[:id])
   end 
 
 
   def update
-    @note=ExamType.find(params[:id])
-    if @note.update_attributes(params[:note])
-      flash[:notice]="Exam type #{@note.name} info updated."
-      redirect_to(:action=>"show", :id=>@note.id)    
+    @extype=ExamType.find(params[:id])
+    if @extype.update_attributes(params[:extype])
+      flash[:notice]="Exam type #{@extype.name} info updated."
+      redirect_to(:action=>"show", :id=>@extype.id)    
     else
       render("edit")
     end
@@ -51,7 +51,7 @@ class ExamTypesController < ApplicationController
 
 
   def delete
-    @note=ExamType.find(params[:id])
+    @extype=ExamType.find(params[:id])
   end
 
 

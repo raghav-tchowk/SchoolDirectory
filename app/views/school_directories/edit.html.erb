@@ -5,7 +5,7 @@
 <%= form_for(:school, :url=>{:action=>"update", :id=>@school.id}) do |f| %>
 
 
-<%= render(:partial=>"tabletofill", :locals=>{:f=>f}) %>
+<%= render(:partial=>"form", :locals=>{:f=>f}) %>
 
 
 

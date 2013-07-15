@@ -1,7 +1,7 @@
 <%= link_to("<<Back to list", {:action=>"list"}) %>
 <div >
 <h2>Update ExamType info</h2>
-<%= form_for(:note, :url=>{:action=>"update", :id=>@note.id}) do |f| %>
+<%= form_for(:extype, :url=>{:action=>"update", :id=>@extype.id}) do |f| %>
 
 
 <%= render(:partial=>"form", :locals=>{:f=>f}) %>
@@ -20,7 +20,7 @@
 </div>
 
 <div style="color:red">
-	<% @note.errors.full_messages.each do |err| %>
+	<% @extype.errors.full_messages.each do |err| %>
     	*<%= err %><br />
     <% end %>
 </div>

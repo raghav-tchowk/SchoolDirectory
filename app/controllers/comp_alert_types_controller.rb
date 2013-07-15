@@ -7,27 +7,27 @@ class CompAlertTypesController < ApplicationController
 
 
   def list
-    @notes=CompAlertType.all
+    @comalerts=CompAlertType.all
     @q=CompAlertType.search(params[:q])
-    @notes=@q.result()
+    @comalerts=@q.result()
   end
 
 
   def show
-    @note=CompAlertType.find(params[:id])
+    @comalert=CompAlertType.find(params[:id])
   end
 
 
   def new
-    @note =CompAlertType.new
+    @comalert =CompAlertType.new
   end
 
 
   def create
-    @note =CompAlertType.new(params[:note])
-    if @note.save
-      flash[:notice]="Competition Alert #{@note.name} created. "
-      redirect_to(:action=>"show", :id=>@note.id)
+    @comalert =CompAlertType.new(params[:comalert])
+    if @comalert.save
+      flash[:notice]="Competition Alert #{@comalert.name} created. "
+      redirect_to(:action=>"show", :id=>@comalert.id)
     else
       render("new")
     end
@@ -35,15 +35,15 @@ class CompAlertTypesController < ApplicationController
 
 
   def edit
-    @note=CompAlertType.find(params[:id])
+    @comalert=CompAlertType.find(params[:id])
   end 
 
 
   def update
-    @note=CompAlertType.find(params[:id])
-    if @note.update_attributes(params[:note])
-      flash[:notice]="Competition Alert #{@note.name} info updated."
-      redirect_to(:action=>"show", :id=>@note.id)    
+    @comalert=CompAlertType.find(params[:id])
+    if @comalert.update_attributes(params[:comalert])
+      flash[:notice]="Competition Alert #{@comalert.name} info updated."
+      redirect_to(:action=>"show", :id=>@comalert.id)    
     else
       render("edit")
     end
@@ -51,7 +51,7 @@ class CompAlertTypesController < ApplicationController
 
 
   def delete
-    @note=CompAlertType.find(params[:id])
+    @comalert=CompAlertType.find(params[:id])
   end
 
 

@@ -10,7 +10,7 @@
 	<h2>Staffs</h2>
 
 
-	<table summary="sdepts list">
+	<table summary="staffs list">
 		<tr>
 		<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		<th>staff_category_id&nbsp;&nbsp;&nbsp;&nbsp;</th>
@@ -45,44 +45,44 @@
 
 		</tr>
 
-		<% @sdepts.each do |sdept| %>
+		<% @staffs.each do |staff| %>
 
 			<tr>
-				<td><%=sdept.id%></td>
-				<td><%=sdept.staff_category_id %></td>
-				<td><%=sdept.staff_department_id %></td>
-				<td><%=sdept.first_name%></td>
-				<td><%=sdept.last_name %></td>
-				<td><%=sdept.staff_number %></td>
-				<td><%=sdept.gender %></td>
-				<td><%=sdept.joining_date %></td>
-				<td><%=sdept.qualification %></td>
-				<td><%=sdept.experience_detail %></td>
-				<td><%=sdept.experience_year %></td>
-				<td><%=sdept.date_of_birth %></td>
-				<td><%=sdept.blood_group %></td>
-				<td><%=sdept.home_address_line1 %></td>
-				<td><%=sdept.home_address_line2 %></td>
-				<td><%=sdept.home_city %></td>
-				<td><%=sdept.home_state %></td>
-				<td><%=sdept.home_pincode %></td>
-				<td><%=sdept.home_phone1 %></td>	
-				<td><%=sdept.home_phone2 %></td>		
-				<td><%=sdept.mobile_no1 %></td>		
-				<td><%=sdept.mobile_no2 %></td>	
-				<td><%=sdept.email_id1 %></td>	
-				<td><%=sdept.email_id2 %></td>	
-				<td><%=sdept.marital_status %></td>	
-				<td><%=sdept.photo %></td>	
-				<td><%=sdept.last_position_held %></td>	
-				<td><%=sdept.moved_from %></td>	
-				<td><%=sdept.remarks	 %></td>	
-				<td><%=sdept.is_department_admin	 %></td>		
+				<td><%=staff.id%></td>
+				<td><%=staff.staff_category_id %></td>
+				<td><%=staff.staff_department_id %></td>
+				<td><%=staff.first_name%></td>
+				<td><%=staff.last_name %></td>
+				<td><%=staff.staff_number %></td>
+				<td><%=staff.gender %></td>
+				<td><%=staff.joining_date %></td>
+				<td><%=staff.qualification %></td>
+				<td><%=staff.experience_detail %></td>
+				<td><%=staff.experience_year %></td>
+				<td><%=staff.date_of_birth %></td>
+				<td><%=staff.blood_group %></td>
+				<td><%=staff.home_address_line1 %></td>
+				<td><%=staff.home_address_line2 %></td>
+				<td><%=staff.home_city %></td>
+				<td><%=staff.home_state %></td>
+				<td><%=staff.home_pincode %></td>
+				<td><%=staff.home_phone1 %></td>	
+				<td><%=staff.home_phone2 %></td>		
+				<td><%=staff.mobile_no1 %></td>		
+				<td><%=staff.mobile_no2 %></td>	
+				<td><%=staff.email_id1 %></td>	
+				<td><%=staff.email_id2 %></td>	
+				<td><%=staff.marital_status %></td>	
+				<td><%=staff.photo %></td>	
+				<td><%=staff.last_position_held %></td>	
+				<td><%=staff.moved_from %></td>	
+				<td><%=staff.remarks	 %></td>	
+				<td><%=staff.is_department_admin	 %></td>		
 				<td>		
 
-					<%=link_to("Show", {:action=>"show", :id=>sdept.id}) %>
-				<%= link_to("Edit", {:action=>"edit", :id=>sdept.id}) %>
-				<%= link_to("Delete", {:action=>"delete", :id=>sdept.id}) %>
+					<%=link_to("Show", {:action=>"show", :id=>staff.id}) %>
+				<%= link_to("Edit", {:action=>"edit", :id=>staff.id}) %>
+				<%= link_to("Delete", {:action=>"delete", :id=>staff.id}) %>
 
 
 

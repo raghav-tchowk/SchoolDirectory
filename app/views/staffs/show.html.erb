@@ -8,48 +8,48 @@
 
 
 
-<h1>Showing Record of <%=@sdept.first_name %> from staffs Directory</h1>
+<h1>Showing Record of <%=@staff.first_name %> from staffs Directory</h1>
 <%= link_to("<<Back to full list", {:action=>"list"}) %>
 <div>
 <div>
 
 <ul>
 
-	<li><b>staff_category_id</b>  <%=@sdept.staff_category_id%></li>
-<li><b>staff_department_id</b>  <%=@sdept.staff_department_id%></li>
+	<li><b>staff_category_id</b>  <%=@staff.staff_category_id%></li>
+<li><b>staff_department_id</b>  <%=@staff.staff_department_id%></li>
 
-<li><b>ID</b> <%=@sdept.id%></li>
-<li><b>first name</b>  <%=@sdept.first_name%></li>
+<li><b>ID</b> <%=@staff.id%></li>
+<li><b>first name</b>  <%=@staff.first_name%></li>
 
-<li><b>last_name</b>  <%=@sdept.last_name %></li>
-<li><b>staff_number</b>  <%=@sdept.staff_number %></li>
-<li><b>gender</b>  <%=@sdept.gender %></li>
-<li><b>joining_date</b>  <%=@sdept.joining_date %></li>
-<li><b>qualification</b>  <%=@sdept.qualification %></li>
-<li><b>experience_detail</b>  <%=@sdept.experience_detail %></li>
-<li><b>experience_year</b>  <%=@sdept.experience_year %></li>
-<li><b>date_of_birth</b>  <%=@sdept.date_of_birth %></li>
-<li><b>blood_group</b>  <%=@sdept.blood_group %></li>
-<li><b>home_address_line1</b>  <%=@sdept.home_address_line1 %></li>
-<li><b>home_address_line2</b>  <%=@sdept.home_address_line2 %></li>
-<li><b>home_city</b>  <%=@sdept.home_city %></li>
-<li><b>home_state</b>  <%=@sdept.home_state %></li>
-<li><b>home_pincode</b>  <%=@sdept.home_pincode %></li>
-<li><b>home_phone1</b>  <%=@sdept.home_phone1 %></li>
-<li><b>home_phone2</b>  <%=@sdept.home_phone2 %></li>
-<li><b>mobile_no1</b>  <%=@sdept.mobile_no1 %></li>
-<li><b>mobile_no2</b>  <%=@sdept.mobile_no2 %></li>
-<li><b>email_id1</b>  <%=@sdept.email_id1 %></li>
-<li><b>email_id2</b>  <%=@sdept.email_id2 %></li>
-<li><b>marital_status</b>  <%=@sdept.marital_status %></li>
-<li><b>photo</b>  <%=@sdept.photo %></li>
-<li><b>last_position_held</b>  <%=@sdept.last_position_held %></li>
-<li><b>moved_from</b>  <%=@sdept.moved_from %></li>
-<li><b>remarks</b>  <%=@sdept.remarks %></li>
-<li><b>is_department_admin</b>  <%=@sdept.is_department_admin %></li>
+<li><b>last_name</b>  <%=@staff.last_name %></li>
+<li><b>staff_number</b>  <%=@staff.staff_number %></li>
+<li><b>gender</b>  <%=@staff.gender %></li>
+<li><b>joining_date</b>  <%=@staff.joining_date %></li>
+<li><b>qualification</b>  <%=@staff.qualification %></li>
+<li><b>experience_detail</b>  <%=@staff.experience_detail %></li>
+<li><b>experience_year</b>  <%=@staff.experience_year %></li>
+<li><b>date_of_birth</b>  <%=@staff.date_of_birth %></li>
+<li><b>blood_group</b>  <%=@staff.blood_group %></li>
+<li><b>home_address_line1</b>  <%=@staff.home_address_line1 %></li>
+<li><b>home_address_line2</b>  <%=@staff.home_address_line2 %></li>
+<li><b>home_city</b>  <%=@staff.home_city %></li>
+<li><b>home_state</b>  <%=@staff.home_state %></li>
+<li><b>home_pincode</b>  <%=@staff.home_pincode %></li>
+<li><b>home_phone1</b>  <%=@staff.home_phone1 %></li>
+<li><b>home_phone2</b>  <%=@staff.home_phone2 %></li>
+<li><b>mobile_no1</b>  <%=@staff.mobile_no1 %></li>
+<li><b>mobile_no2</b>  <%=@staff.mobile_no2 %></li>
+<li><b>email_id1</b>  <%=@staff.email_id1 %></li>
+<li><b>email_id2</b>  <%=@staff.email_id2 %></li>
+<li><b>marital_status</b>  <%=@staff.marital_status %></li>
+<li><b>photo</b>  <%=@staff.photo %></li>
+<li><b>last_position_held</b>  <%=@staff.last_position_held %></li>
+<li><b>moved_from</b>  <%=@staff.moved_from %></li>
+<li><b>remarks</b>  <%=@staff.remarks %></li>
+<li><b>is_department_admin</b>  <%=@staff.is_department_admin %></li>
 
 </ul>
 
 </div>
 
-<%= link_to("update>>", {:action=>"edit", :id=>@sdept.id}) %>
+<%= link_to("update>>", {:action=>"edit", :id=>@staff.id}) %>

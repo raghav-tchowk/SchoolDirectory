@@ -1,12 +1,12 @@
 <%= link_to("<<Back to full list", {:action=>"list"}) %>
 <div>
 <h2>Create staffs</h2>
-<%= form_for(:sdept, :url=>{:action=>"create"} ) do |f| %>
+<%= form_for(:staff, :url=>{:action=>"create"} ) do |f| %>
 
 
 
 
-	<%= render(:partial=>"tabletofill", :locals=>{:f=>f}) %>
+	<%= render(:partial=>"form", :locals=>{:f=>f}) %>
 
 
 	<p> * fields marked with asterisk are compulsary fields</p>
@@ -20,7 +20,7 @@
 </div>
 
 <div style="color:red">
-	<% @sdept.errors.full_messages.each do |err| %>
+	<% @staff.errors.full_messages.each do |err| %>
     	*<%= err %><br />
     <% end %>
 </div>

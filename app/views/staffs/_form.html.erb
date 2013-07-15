@@ -1,0 +1,147 @@
+<table summary="Schools form fields">
+
+
+<tr >
+<td><%=f.label(:staff_category) %>*</td>
+<td><%=f.collection_select(:staff_category_id, StaffCategory.all, :id, :name, {prompt: lambda{|category| category.name }}) %></td>
+<!-- collection_select(:post, :category_id, Category.all, :id, :name, {prompt: lambda{|category| category.archived? }}) -->
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><%=f.label(:staff_department) %>*</td>
+<td><%=f.collection_select(:staff_department_id, StaffDepartment.all, :id, :name, {prompt: lambda{|category| category.name }}) %></td>
+</tr>
+
+
+
+
+<tr >
+<td><%=f.label(:first_name) %>*</td>
+<td><%=f.text_field(:first_name) %></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><%=f.label(:last_name) %></td>
+<td><%=f.text_field(:last_name) %></td>
+</tr>
+
+<tr>
+<td><%=f.label(:staff_number) %>*</td>
+<td><%=f.text_field(:staff_number) %></td>
+</tr>
+
+<tr>
+<td><%=f.label(:gender) %>*</td>
+<td><%=f.select(:gender, ["Male", "Female"], :prompt=>"-select-") %></td>
+</tr>
+
+<tr>
+<td><%=f.label(:joining_date) %>*</td>
+<td><%=f.text_field(:joining_date, :class=>"date") %></td>
+</tr>
+<tr>
+<td><%=f.label(:qualification) %>*</td>
+<td><%=f.select(:qualification, ["Undergraduate","Graduate","Postgraduate"], :prompt=>"-select-") %></td>
+</tr>
+
+<tr>
+<td><%=f.label(:experience_detail) %></td>
+<td><%=f.text_area(:experience_detail) %></td>
+</tr>
+
+<tr>
+<td><%=f.label(:experience_year	) %>*</td>
+<% h=(1..100).sort %>
+<td><%=f.select(:experience_year, h	) %></td>
+</tr>
+<% ## %>
+<tr>
+<td><%=f.label(:date_of_birth) %>*</td>
+<td><%=f.date_select(:date_of_birth, options={:start_year=>1900}) %></td>
+</tr>
+
+<tr>
+<td><%=f.label(:blood_group) %></td>
+<td><%=f.select(:blood_group, ["A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"], {:prompt=>"-select-"}) %></td>
+</tr>
+
+
+
+
+<tr>
+<td><%=f.label(:home_address_line1) %>*</td>
+<td><%=f.text_area(:home_address_line1) %></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><%=f.label(:home_address_line2) %></td>
+<td><%=f.text_area(:home_address_line2) %></td>
+</tr>
+
+<tr>
+<td><%=f.label(:home_city) %>*</td>
+<td><%=f.text_field(:home_city) %></td>
+</tr>
+
+<tr>
+<td><%=f.label(:home_state) %>*</td>
+<td><%=f.text_field(:home_state) %></td>
+</tr>
+
+<tr>
+<td><%=f.label(:home_pincode) %>*</td>
+<td><%=f.text_field(:home_pincode) %></td>
+</tr>
+
+<tr>
+<td><%=f.label(:home_phone1) %>*</td>
+<td><%=f.text_field(:home_phone1) %></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><%=f.label(:home_phone2) %></td>
+<td><%=f.text_field(:home_phone2) %></td>
+</tr>
+
+<tr>
+<td><%=f.label(:mobile_no1) %>*</td>
+<td><%=f.text_field(:mobile_no1) %></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><%=f.label(:mobile_no2) %></td>
+<td><%=f.text_field(:mobile_no2) %></td>
+</tr>
+
+<tr>
+<td><%=f.label(:email_id1) %>*</td>
+<td><%=f.text_field(:email_id1) %></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><%=f.label(:email_id2) %></td>
+<td><%=f.text_field(:email_id2) %></td>
+</tr>
+
+<tr>
+<td><%=f.label(:marital_status) %>*</td>
+<td><%=f.select(:marital_status, ["Bachelor","Married"], :prompt=>"-select-") %></td>
+</tr>
+
+<tr>
+<td><%=f.label(:photo) %></td>
+<td><%=f.text_area(:photo, :size=>"12*20") %></td>
+</tr>
+
+<tr>
+<td><%=f.label(:last_position_held) %></td>
+<td><%=f.text_field(:last_position_held) %></td>
+</tr>
+
+<tr>
+<td><%=f.label(:moved_from) %></td>
+<td><%=f.text_field(:moved_from) %></td>
+</tr>
+
+<tr>
+<td><%=f.label(:remarks) %></td>
+<td><%=f.text_area(:remarks) %></td>
+</tr>
+
+<tr>
+<td><%=f.label(:is_department_admin) %></td>
+<td><%=f.check_box(:is_department_admin) %></td>
+</tr>
+
+
+
+
+</table>

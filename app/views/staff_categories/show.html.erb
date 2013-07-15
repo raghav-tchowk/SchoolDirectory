@@ -4,19 +4,19 @@
 </div>
 <% end -%>
 
-<h1>Showing Record of <%=@staff.name %> from Staff categories</h1>
+<h1>Showing Record of <%=@scat.name %> from Staff categories</h1>
 <%= link_to("<<Back to full list", {:action=>"list"}) %>
 <div>
 <div>
 
 <ul>
-<li><b>ID</b> <%=@staff.id%></li>
-<li><b>name</b>  <%=@staff.name%></li>
-<li><b>description</b>  <%=@staff.description %></li>
-<li><b>status</b>  <%=@staff.status %></li>
+<li><b>ID</b> <%=@scat.id%></li>
+<li><b>name</b>  <%=@scat.name%></li>
+<li><b>description</b>  <%=@scat.description %></li>
+<li><b>status</b>  <%=@scat.status %></li>
 
 </ul>
 
 </div>
 
-<%= link_to("update>>", {:action=>"edit", :id=>@staff.id}) %>
+<%= link_to("update>>", {:action=>"edit", :id=>@scat.id}) %>

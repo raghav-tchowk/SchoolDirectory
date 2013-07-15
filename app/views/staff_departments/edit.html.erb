@@ -2,10 +2,10 @@
 <%= link_to("<<Back to list", {:action=>"list"}) %>
 <div>
 <h2>Update staff Departments</h2>
-<%= form_for(:scategory, :url=>{:action=>"update", :id=>@scategory.id}) do |f| %>
+<%= form_for(:sdept, :url=>{:action=>"update", :id=>@sdept.id}) do |f| %>
 
 
-<%= render(:partial=>"tabletofill", :locals=>{:f=>f}) %>
+<%= render(:partial=>"form", :locals=>{:f=>f}) %>
 
 
 
@@ -21,7 +21,7 @@
 </div>
 
 <div style="color:red">
-	<% @scategory.errors.full_messages.each do |err| %>
+	<% @sdept.errors.full_messages.each do |err| %>
     	*<%= err %><br />
     <% end %>
 </div>

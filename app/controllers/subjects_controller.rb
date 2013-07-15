@@ -7,27 +7,27 @@ class SubjectsController < ApplicationController
 
 
   def list
-    @notes=Subject.all
+    @subs=Subject.all
     @q=Subject.search(params[:q])
-    @notes=@q.result()
+    @subs=@q.result()
   end
 
 
   def show
-    @note=Subject.find(params[:id])
+    @sub=Subject.find(params[:id])
   end
 
 
   def new
-    @note =Subject.new
+    @sub =Subject.new
   end
 
 
   def create
-    @note =Subject.new(params[:note])
-    if @note.save
-      flash[:notice]="Subject #{@note.name} created. "
-      redirect_to(:action=>"show", :id=>@note.id)
+    @sub =Subject.new(params[:sub])
+    if @sub.save
+      flash[:notice]="Subject #{@sub.name} created. "
+      redirect_to(:action=>"show", :id=>@sub.id)
     else
       render("new")
     end
@@ -35,15 +35,15 @@ class SubjectsController < ApplicationController
 
 
   def edit
-    @note=Subject.find(params[:id])
+    @sub=Subject.find(params[:id])
   end 
 
 
   def update
-    @note=Subject.find(params[:id])
-    if @note.update_attributes(params[:note])
-      flash[:notice]="Subject account #{@note.name} info updated."
-      redirect_to(:action=>"show", :id=>@note.id)    
+    @sub=Subject.find(params[:id])
+    if @sub.update_attributes(params[:sub])
+      flash[:notice]="Subject account #{@sub.name} info updated."
+      redirect_to(:action=>"show", :id=>@sub.id)    
     else
       render("edit")
     end
@@ -51,7 +51,7 @@ class SubjectsController < ApplicationController
 
 
   def delete
-    @note=Subject.find(params[:id])
+    @sub=Subject.find(params[:id])
   end
 
 
