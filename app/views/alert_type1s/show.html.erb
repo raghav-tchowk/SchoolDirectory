@@ -8,16 +8,15 @@
 
 
 
-<h1>Showing Alert <%=@note.name %></h1>
+<h1>Showing Alert <%=@alerttype1.name %></h1>
 <%= link_to("<<Back to full list", {:action=>"list"}) %>
 <div>
 	<ul>
-	<li><b>ID</b> <%=@note.id%></li>
-	<li><b>Alert</b>  <%=@note.name%></li>
-	<li><b>Detail</b>  <%=@note.detail %></li>
-	
+	<li><b>ID</b> <%=@alerttype1.id%></li>
+	<li><b>Alert</b>  <%=@alerttype1.name%></li>
+	<li><b>Detail</b>  <%=@alerttype1.detail %></li>
 	</ul>
 
 </div>
 
-<%= link_to("update>>", {:action=>"edit", :id=>@note.id}) %>
+<%= link_to("update>>", {:action=>"edit", :id=>@alerttype1.id}) %>

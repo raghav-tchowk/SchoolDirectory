@@ -7,27 +7,27 @@ class EventAlertTypesController < ApplicationController
 
 
   def list
-    @evalerts=EventAlertType.all
+    @eventalerttypes=EventAlertType.all
     @q=EventAlertType.search(params[:q])
-    @evalerts=@q.result()
+    @eventalerttypes=@q.result()
   end
 
 
   def show
-    @evalert=EventAlertType.find(params[:id])
+    @eventalerttype=EventAlertType.find(params[:id])
   end
 
 
   def new
-    @evalert =EventAlertType.new
+    @eventalerttype =EventAlertType.new
   end
 
 
   def create
-    @evalert =EventAlertType.new(params[:evalert])
-    if @evalert.save
-      flash[:notice]="Event alert #{@evalert.name} created. "
-      redirect_to(:action=>"show", :id=>@evalert.id)
+    @eventalerttype =EventAlertType.new(params[:eventalerttype])
+    if @eventalerttype.save
+      flash[:notice]="Event alert #{@eventalerttype.name} created. "
+      redirect_to(:action=>"show", :id=>@eventalerttype.id)
     else
       render("new")
     end
@@ -35,15 +35,15 @@ class EventAlertTypesController < ApplicationController
 
 
   def edit
-    @evalert=EventAlertType.find(params[:id])
+    @eventalerttype=EventAlertType.find(params[:id])
   end 
 
 
   def update
-    @evalert=EventAlertType.find(params[:id])
-    if @evalert.update_attributes(params[:evalert])
-      flash[:notice]="Event alert account #{@evalert.name} info updated."
-      redirect_to(:action=>"show", :id=>@evalert.id)    
+    @eventalerttype=EventAlertType.find(params[:id])
+    if @eventalerttype.update_attributes(params[:eventalerttype])
+      flash[:notice]="Event alert account #{@eventalerttype.name} info updated."
+      redirect_to(:action=>"show", :id=>@eventalerttype.id)    
     else
       render("edit")
     end
@@ -51,7 +51,7 @@ class EventAlertTypesController < ApplicationController
 
 
   def delete
-    @evalert=EventAlertType.find(params[:id])
+    @eventalerttype=EventAlertType.find(params[:id])
   end
 
 

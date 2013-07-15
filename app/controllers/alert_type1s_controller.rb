@@ -7,27 +7,27 @@ class AlertType1sController < ApplicationController
 
 
   def list
-    @notes=AlertType1.all
+    @alerttype1s=AlertType1.all
     @q=AlertType1.search(params[:q])
-    @notes=@q.result()
+    @alerttype1s=@q.result()
   end
 
 
   def show
-    @note=AlertType1.find(params[:id])
+    @alerttype1=AlertType1.find(params[:id])
   end
 
 
   def new
-    @note =AlertType1.new
+    @alerttype1 =AlertType1.new
   end
 
 
   def create
-    @note =AlertType1.new(params[:note])
-    if @note.save
-      flash[:notice]="Alert #{@note.name} created. "
-      redirect_to(:action=>"show", :id=>@note.id)
+    @alerttype1 =AlertType1.new(params[:alerttype1])
+    if @alerttype1.save
+      flash[:notice]="Alert #{@alerttype1.name} created. "
+      redirect_to(:action=>"show", :id=>@alerttype1.id)
     else
       render("new")
     end
@@ -35,15 +35,15 @@ class AlertType1sController < ApplicationController
 
 
   def edit
-    @note=AlertType1.find(params[:id])
+    @alerttype1=AlertType1.find(params[:id])
   end 
 
 
   def update
-    @note=AlertType1.find(params[:id])
-    if @note.update_attributes(params[:note])
-      flash[:notice]="Alert #{@note.name} info updated."
-      redirect_to(:action=>"show", :id=>@note.id)    
+    @alerttype1=AlertType1.find(params[:id])
+    if @alerttype1.update_attributes(params[:alerttype1])
+      flash[:notice]="Alert #{@alerttype1.name} info updated."
+      redirect_to(:action=>"show", :id=>@alerttype1.id)    
     else
       render("edit")
     end
@@ -51,7 +51,7 @@ class AlertType1sController < ApplicationController
 
 
   def delete
-    @note=AlertType1.find(params[:id])
+    @alerttype1=AlertType1.find(params[:id])
   end
 
 

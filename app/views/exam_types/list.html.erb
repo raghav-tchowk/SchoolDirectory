@@ -11,25 +11,25 @@
 
 
 
-	<table summary="extypes list">
+	<table summary="examtypes list">
 		<tr>
 		<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		<th>ExamType&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		<th>Details&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		
 		</tr>
-		<% @extypes.each do |extype| %>
+		<% @examtypes.each do |examtype| %>
 
 			<tr>
-				<td><%=extype.id%></td>
-				<td><%=extype.name%></td>
-				<td><%=extype.detail%></td>
+				<td><%=examtype.id%></td>
+				<td><%=examtype.name%></td>
+				<td><%=examtype.detail%></td>
 				
 				<td>
 
-					<%=link_to("Show", {:action=>"show", :id=>extype.id}) %>
-				<%= link_to("Edit", {:action=>"edit", :id=>extype.id}) %>
-				<%= link_to("Delete", {:action=>"delete", :id=>extype.id}) %>
+					<%=link_to("Show", {:action=>"show", :id=>examtype.id}) %>
+				<%= link_to("Edit", {:action=>"edit", :id=>examtype.id}) %>
+				<%= link_to("Delete", {:action=>"delete", :id=>examtype.id}) %>
 
 
 

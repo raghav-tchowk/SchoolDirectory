@@ -7,25 +7,25 @@ class EmergencyAlertTypesController < ApplicationController
 
 
   def list
-    @emalerts=EmergencyAlertType.all
+    @emergencyalerttypes=EmergencyAlertType.all
   end
 
 
   def show
-    @emalert=EmergencyAlertType.find(params[:id])
+    @emergencyalerttype=EmergencyAlertType.find(params[:id])
   end
 
 
   def new
-    @emalert =EmergencyAlertType.new
+    @emergencyalerttype =EmergencyAlertType.new
   end
 
 
   def create
-    @emalert =EmergencyAlertType.new(params[:emalert])
-    if @emalert.save
-      flash[:notice]="Emergency alert #{@emalert.name} created. "
-      redirect_to(:action=>"show", :id=>@emalert.id)
+    @emergencyalerttype =EmergencyAlertType.new(params[:emergencyalerttype])
+    if @emergencyalerttype.save
+      flash[:notice]="Emergency alert #{@emergencyalerttype.name} created. "
+      redirect_to(:action=>"show", :id=>@emergencyalerttype.id)
     else
       render("new")
     end
@@ -33,15 +33,15 @@ class EmergencyAlertTypesController < ApplicationController
 
 
   def edit
-    @emalert=EmergencyAlertType.find(params[:id])
+    @emergencyalerttype=EmergencyAlertType.find(params[:id])
   end 
 
 
   def update
-    @emalert=EmergencyAlertType.find(params[:id])
-    if @emalert.update_attributes(params[:emalert])
-      flash[:notice]="Emergency #{@emalert.name} info updated."
-      redirect_to(:action=>"show", :id=>@emalert.id)    
+    @emergencyalerttype=EmergencyAlertType.find(params[:id])
+    if @emergencyalerttype.update_attributes(params[:emergencyalerttype])
+      flash[:notice]="Emergency #{@emergencyalerttype.name} info updated."
+      redirect_to(:action=>"show", :id=>@emergencyalerttype.id)    
     else
       render("edit")
     end
@@ -49,7 +49,7 @@ class EmergencyAlertTypesController < ApplicationController
 
 
   def delete
-    @emalert=EmergencyAlertType.find(params[:id])
+    @emergencyalerttype=EmergencyAlertType.find(params[:id])
   end
 
 

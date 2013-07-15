@@ -8,16 +8,16 @@
 
 
 
-<h1>Showing ExamType <%=@extype.name %></h1>
+<h1>Showing ExamType <%=@examtype.name %></h1>
 <%= link_to("<<Back to full list", {:action=>"list"}) %>
 <div>
 	<ul>
-	<li><b>ID</b> <%=@extype.id%></li>
-	<li><b>ExamType</b>  <%=@extype.name%></li>
-	<li><b>Detail</b>  <%=@extype.detail %></li>
+	<li><b>ID</b> <%=@examtype.id%></li>
+	<li><b>ExamType</b>  <%=@examtype.name%></li>
+	<li><b>Detail</b>  <%=@examtype.detail %></li>
 	
 	</ul>
 
 </div>
 
-<%= link_to("update>>", {:action=>"edit", :id=>@extype.id}) %>
+<%= link_to("update>>", {:action=>"edit", :id=>@examtype.id}) %>

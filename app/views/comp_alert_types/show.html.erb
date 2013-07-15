@@ -4,16 +4,16 @@
 </div>
 <% end -%>
 
-<h1>Showing Competition Alert <%=@comalert.name %></h1>
+<h1>Showing Competition Alert <%=@compalerttype.name %></h1>
 <%= link_to("<<Back to full list", {:action=>"list"}) %>
 <div>
 	<ul>
-	<li><b>ID</b> <%=@comalert.id%></li>
-	<li><b>Competition Alert</b>  <%=@comalert.name%></li>
+	<li><b>ID</b> <%=@compalerttype.id%></li>
+	<li><b>Competition Alert</b>  <%=@compalerttype.name%></li>
 	
 	
 	</ul>
 
 </div>
 
-<%= link_to("update>>", {:action=>"edit", :id=>@comalert.id}) %>
+<%= link_to("update>>", {:action=>"edit", :id=>@compalerttype.id}) %>

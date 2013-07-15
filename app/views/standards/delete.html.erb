@@ -1,9 +1,9 @@
 <%= link_to("<<back to full list", {:action=>"list"}) %>
 <div>
 <h2>Delete this standard</h2>
-<%= form_for(:note, :url=>{:action=>"destroy", :id=>@note.id}) do |f| %>
+<%= form_for(:standard, :url=>{:action=>"destroy", :id=>@standard.id}) do |f| %>
 <p>Are u sure u wanna delete this standard?</p>
-<p><%=@note.name%></p>
+<p><%=@standard.name%></p>
 
 <div>
 <%= submit_tag("Delete Standard") %>

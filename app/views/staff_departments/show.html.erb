@@ -8,22 +8,22 @@
 
 
 
-<h1>Showing Record of <%=@sdept.name %> from staff department</h1>
+<h1>Showing Record of <%=@staffdepartment.name %> from staff department</h1>
 <%= link_to("<<Back to full list", {:action=>"list"}) %>
 <div>
 <div>
 
 <ul>
-<li><b>ID</b> <%=@sdept.id%></li>
-<li><b>name</b>  <%=@sdept.name%></li>
-<li><b>department_alias</b>  <%=@sdept.departemnt_alias %></li>
-<li><b>department_code</b>  <%=@sdept.department_code %></li>
-<li><b>description</b>  <%=@sdept.description %></li>
-<li><b>status</b>  <%=@sdept.status %></li>
-<li><b>remarks</b>  <%=@sdept.remarks %></li>
+<li><b>ID</b> <%=@staffdepartment.id%></li>
+<li><b>name</b>  <%=@staffdepartment.name%></li>
+<li><b>department_alias</b>  <%=@staffdepartment.departemnt_alias %></li>
+<li><b>department_code</b>  <%=@staffdepartment.department_code %></li>
+<li><b>description</b>  <%=@staffdepartment.description %></li>
+<li><b>status</b>  <%=@staffdepartment.status %></li>
+<li><b>remarks</b>  <%=@staffdepartment.remarks %></li>
 
 </ul>
 
 </div>
 
-<%= link_to("update>>", {:action=>"edit", :id=>@sdept.id}) %>
+<%= link_to("update>>", {:action=>"edit", :id=>@staffdepartment.id}) %>

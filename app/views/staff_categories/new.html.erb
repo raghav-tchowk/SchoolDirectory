@@ -1,7 +1,7 @@
 <%= link_to("<<Back to full list", {:action=>"list"}) %>
 <div>
-<h2>Create scat category</h2>
-<%= form_for(:scat, :url=>{:action=>"create"}) do |f| %>
+<h2>Create staffcategory category</h2>
+<%= form_for(:staffcategory, :url=>{:action=>"create"}) do |f| %>
 
 
 
@@ -13,14 +13,14 @@
 
 		<div>
 
-		<%=submit_tag("Create scat category") %>
+		<%=submit_tag("Create staffcategory category") %>
 
 		</div>
 <% end -%>
 </div>
 
 <div style="color:red">
-	<% @scat.errors.full_messages.each do |err| %>
+	<% @staffcategory.errors.full_messages.each do |err| %>
     	*<%= err %><br />
     <% end %>
 </div>

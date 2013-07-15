@@ -5,48 +5,48 @@ class StaffCategoriesController < ApplicationController
   	end
 
 	def list
-	    @scats=StaffCategory.all
+	    @staffcategoies=StaffCategory.all
 	end
 
 	def show
-		@scat=StaffCategory.find(params[:id])
+		@staffcategory=StaffCategory.find(params[:id])
 	end
 
 	def new
-		@scat=StaffCategory.new
+		@staffcategory=StaffCategory.new
 	end
 
 	def create
-		@scat=StaffCategory.new(params[:scat])
-		if @scat.save
-		  flash[:notice]="scat category account created.  #{@scat.name}"
-		  redirect_to(:action=>"show", :id=>@scat.id)
+		@staffcategory=StaffCategory.new(params[:staffcategory])
+		if @staffcategory.save
+		  flash[:notice]="staffcategory category account created.  #{@staffcategory.name}"
+		  redirect_to(:action=>"show", :id=>@staffcategory.id)
 		else
 		  render("new")
 		end
 	end
 
 	def edit
-		@scat=StaffCategory.find(params[:id])
+		@staffcategory=StaffCategory.find(params[:id])
 	end
 
 	def update
-		@scat=StaffCategory.find(params[:id])
-		if @scat.update_attributes(params[:scat])
-		  flash[:notice]="scat category account info updated.  #{@scat.name}"
-		  redirect_to(:action=>"show", :id=>@scat.id)    
+		@staffcategory=StaffCategory.find(params[:id])
+		if @staffcategory.update_attributes(params[:staffcategory])
+		  flash[:notice]="staffcategory category account info updated.  #{@staffcategory.name}"
+		  redirect_to(:action=>"show", :id=>@staffcategory.id)    
 		else
 		  render("edit")
 		end
 	end
 
 	def delete
-		@scat=StaffCategory.find(params[:id])
+		@staffcategory=StaffCategory.find(params[:id])
 	end
 
 	def destroy
 		StaffCategory.find(params[:id]).destroy
-		flash[:notice]="scat category account destroyed."
+		flash[:notice]="staffcategory category account destroyed."
 		redirect_to(:action=>"list")
 	end
 

@@ -1,7 +1,7 @@
 <%= link_to("<<Back to full list", {:action=>"list"}) %>
 <div>
-<h2>Create a new Sticky note</h2>
-<%= form_for(:note, :url=>{:action=>"create"}) do |f| %>
+<h2>Create a new Sticky stickynote</h2>
+<%= form_for(:stickynote, :url=>{:action=>"create"}) do |f| %>
 
 
 
@@ -13,7 +13,7 @@
 
 		<div>
 
-		<%=submit_tag("Create note") %>
+		<%=submit_tag("Create stickynote") %>
 
 		</div>
 <% end -%>
@@ -22,7 +22,7 @@
 
 
 <div style="color:red">
-	<% @note.errors.full_messages.each do |err| %>
+	<% @stickynote.errors.full_messages.each do |err| %>
     	*<%= err %><br />
     <% end %>
 </div>

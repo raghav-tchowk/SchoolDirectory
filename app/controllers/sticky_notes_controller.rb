@@ -8,25 +8,25 @@ class StickyNotesController < ApplicationController
 
   def list
     @q=StickyNote.search(params[:q])
-    @notes=@q.result()
+    @stickynotes=@q.result()
   end
 
 
   def show
-    @note=StickyNote.find(params[:id])
+    @stickynote=StickyNote.find(params[:id])
   end
 
 
   def new
-    @note =StickyNote.new
+    @stickynote =StickyNote.new
   end
 
 
   def create
-    @note =StickyNote.new(params[:note])
-    if @note.save
-      flash[:notice]="Sticky note #{@note.title} created. "
-      redirect_to(:action=>"show", :id=>@note.id)
+    @stickynote =StickyNote.new(params[:stickynote])
+    if @stickynote.save
+      flash[:notice]="Sticky stickynote #{@stickynote.title} created. "
+      redirect_to(:action=>"show", :id=>@stickynote.id)
     else
       render("new")
     end
@@ -34,15 +34,15 @@ class StickyNotesController < ApplicationController
 
 
 	def edit
-		@note=StickyNote.find(params[:id])
+		@stickynote=StickyNote.find(params[:id])
 	end	
 
 
   def update
-    @note=StickyNote.find(params[:id])
-    if @note.update_attributes(params[:note])
-      flash[:notice]="note account #{@note.title} info updated."
-      redirect_to(:action=>"show", :id=>@note.id)    
+    @stickynote=StickyNote.find(params[:id])
+    if @stickynote.update_attributes(params[:stickynote])
+      flash[:notice]="stickynote account #{@stickynote.title} info updated."
+      redirect_to(:action=>"show", :id=>@stickynote.id)    
     else
       render("edit")
     end
@@ -50,13 +50,13 @@ class StickyNotesController < ApplicationController
 
 
   def delete
-    @note=StickyNote.find(params[:id])
+    @stickynote=StickyNote.find(params[:id])
   end
 
 
   def destroy
     StickyNote.find(params[:id]).destroy
-    flash[:notice]="note account destroyed."
+    flash[:notice]="stickynote account destroyed."
     redirect_to(:action=>"list")
   end
 end

@@ -1,12 +1,12 @@
 <%= link_to("<<back to full list", {:action=>"list"}) %>
 <div>
-<h2>Delete sticky note</h2>
-<%= form_for(:note, :url=>{:action=>"destroy", :id=>@note.id}) do |f| %>
-<p>Are u sure u wanna delete this note?</p>
-<p><%=@note.title%></p>
+<h2>Delete sticky stickynote</h2>
+<%= form_for(:stickynote, :url=>{:action=>"destroy", :id=>@stickynote.id}) do |f| %>
+<p>Are u sure u wanna delete this stickynote?</p>
+<p><%=@stickynote.title%></p>
 
 <div>
-<%= submit_tag("Delete sticky note") %>
+<%= submit_tag("Delete sticky stickynote") %>
 </div>
 <% end -%>
 </div>

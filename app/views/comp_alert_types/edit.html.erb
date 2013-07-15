@@ -1,7 +1,7 @@
 <%= link_to("<<Back to list", {:action=>"list"}) %>
 <div>
 <h2>Update Competition Alert info</h2>
-<%= form_for(:comalert, :url=>{:action=>"update", :id=>@comalert.id}) do |f| %>
+<%= form_for(:compalerttype, :url=>{:action=>"update", :id=>@compalerttype.id}) do |f| %>
 
 
 <%= render(:partial=>"form", :locals=>{:f=>f}) %>
@@ -20,7 +20,7 @@
 </div>
 
 <div style="color:red">
-	<% @comalert.errors.full_messages.each do |err| %>
+	<% @compalerttype.errors.full_messages.each do |err| %>
     	*<%= err %><br />
     <% end %>
 </div>

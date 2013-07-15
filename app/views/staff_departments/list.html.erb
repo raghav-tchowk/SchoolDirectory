@@ -13,7 +13,7 @@
 	
 
 
-	<table summary="sdepts list">
+	<table summary="staffdepartments list">
 		<tr>
 		<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		<th>staff department&nbsp;&nbsp;&nbsp;&nbsp;</th>
@@ -24,22 +24,22 @@
 		<th>remarks&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		
 		</tr>
-		<% @sdepts.each do |sdept| %>
+		<% @staffdepartments.each do |staffdepartment| %>
 
 			<tr>
-				<td><%=sdept.id%></td>
-				<td><%=sdept.name%></td>
-				<td><%=sdept.departemnt_alias%></td>
-				<td><%=sdept.department_code %></td>
-				<td><%=sdept.description %></td>
-				<td><%=sdept.status %></td>
-				<td><%=sdept.remarks %></td>
+				<td><%=staffdepartment.id%></td>
+				<td><%=staffdepartment.name%></td>
+				<td><%=staffdepartment.departemnt_alias%></td>
+				<td><%=staffdepartment.department_code %></td>
+				<td><%=staffdepartment.description %></td>
+				<td><%=staffdepartment.status %></td>
+				<td><%=staffdepartment.remarks %></td>
 				
 				<td>
 
-					<%=link_to("Show", {:action=>"show", :id=>sdept.id}) %>
-					<%= link_to("Edit", {:action=>"edit", :id=>sdept.id}) %>
-					<%= link_to("Delete", {:action=>"delete", :id=>sdept.id}) %>
+					<%=link_to("Show", {:action=>"show", :id=>staffdepartment.id}) %>
+					<%= link_to("Edit", {:action=>"edit", :id=>staffdepartment.id}) %>
+					<%= link_to("Delete", {:action=>"delete", :id=>staffdepartment.id}) %>
 				</td>
 			</tr>
 		<% end %>

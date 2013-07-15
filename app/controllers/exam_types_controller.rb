@@ -7,27 +7,27 @@ class ExamTypesController < ApplicationController
 
 
   def list
-    @extypes=ExamType.all
+    @examtypes=ExamType.all
     @q=ExamType.search(params[:q])
-    @extypes=@q.result()
+    @examtypes=@q.result()
   end
 
 
   def show
-    @extype=ExamType.find(params[:id])
+    @examtype=ExamType.find(params[:id])
   end
 
 
   def new
-    @extype =ExamType.new
+    @examtype =ExamType.new
   end
 
 
   def create
-    @extype =ExamType.new(params[:extype])
-    if @extype.save
-      flash[:notice]="Exam type #{@extype.name} created. "
-      redirect_to(:action=>"show", :id=>@extype.id)
+    @examtype =ExamType.new(params[:examtype])
+    if @examtype.save
+      flash[:notice]="Exam type #{@examtype.name} created. "
+      redirect_to(:action=>"show", :id=>@examtype.id)
     else
       render("new")
     end
@@ -35,15 +35,15 @@ class ExamTypesController < ApplicationController
 
 
   def edit
-    @extype=ExamType.find(params[:id])
+    @examtype=ExamType.find(params[:id])
   end 
 
 
   def update
-    @extype=ExamType.find(params[:id])
-    if @extype.update_attributes(params[:extype])
-      flash[:notice]="Exam type #{@extype.name} info updated."
-      redirect_to(:action=>"show", :id=>@extype.id)    
+    @examtype=ExamType.find(params[:id])
+    if @examtype.update_attributes(params[:examtype])
+      flash[:notice]="Exam type #{@examtype.name} info updated."
+      redirect_to(:action=>"show", :id=>@examtype.id)    
     else
       render("edit")
     end
@@ -51,7 +51,7 @@ class ExamTypesController < ApplicationController
 
 
   def delete
-    @extype=ExamType.find(params[:id])
+    @examtype=ExamType.find(params[:id])
   end
 
 

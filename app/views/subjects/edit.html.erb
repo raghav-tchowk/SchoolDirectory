@@ -1,7 +1,7 @@
 <%= link_to("<<Back to list", {:action=>"list"}) %>
 <div >
 <h2>Update Subject account</h2>
-<%= form_for(:sub, :url=>{:action=>"update", :id=>@sub.id}) do |f| %>
+<%= form_for(:subject, :url=>{:action=>"update", :id=>@subject.id}) do |f| %>
 
 
 <%= render(:partial=>"form", :locals=>{:f=>f}) %>
@@ -20,7 +20,7 @@
 </div>
 
 <div style="color:red">
-	<% @sub.errors.full_messages.each do |err| %>
+	<% @subject.errors.full_messages.each do |err| %>
     	*<%= err %><br />
     <% end %>
 </div>

@@ -7,27 +7,27 @@ class StandardsController < ApplicationController
 
 
   def list
-    @notes=Standard.all
+    @standards=Standard.all
     @q=Standard.search(params[:q])
-    @notes=@q.result()
+    @standards=@q.result()
   end
 
 
   def show
-    @note=Standard.find(params[:id])
+    @standard=Standard.find(params[:id])
   end
 
 
   def new
-    @note =Standard.new
+    @standard =Standard.new
   end
 
 
   def create
-    @note =Standard.new(params[:note])
-    if @note.save
-      flash[:notice]="Standard #{@note.name} created. "
-      redirect_to(:action=>"show", :id=>@note.id)
+    @standard =Standard.new(params[:standard])
+    if @standard.save
+      flash[:notice]="Standard #{@standard.name} created. "
+      redirect_to(:action=>"show", :id=>@standard.id)
     else
       render("new")
     end
@@ -35,15 +35,15 @@ class StandardsController < ApplicationController
 
 
   def edit
-    @note=Standard.find(params[:id])
+    @standard=Standard.find(params[:id])
   end 
 
 
   def update
-    @note=Standard.find(params[:id])
-    if @note.update_attributes(params[:note])
-      flash[:notice]="Standard account #{@note.name} info updated."
-      redirect_to(:action=>"show", :id=>@note.id)    
+    @standard=Standard.find(params[:id])
+    if @standard.update_attributes(params[:standard])
+      flash[:notice]="Standard account #{@standard.name} info updated."
+      redirect_to(:action=>"show", :id=>@standard.id)    
     else
       render("edit")
     end
@@ -51,7 +51,7 @@ class StandardsController < ApplicationController
 
 
   def delete
-    @note=Standard.find(params[:id])
+    @standard=Standard.find(params[:id])
   end
 
 

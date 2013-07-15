@@ -1,12 +1,12 @@
 <%= link_to("<<back to full list", {:action=>"list"}) %>
 <div>
-<h2>Deleting scat categories</h2>
-<%= form_for(:scat, :url=>{:action=>"destroy", :id=>@scat.id} ) do |f| %>
-<p>Are u sure u wanna delete this scat categories?</p>
-<p><%=@scat.name%></p>
+<h2>Deleting staffcategory categories</h2>
+<%= form_for(:staffcategory, :url=>{:action=>"destroy", :id=>@staffcategory.id} ) do |f| %>
+<p>Are u sure u wanna delete this staffcategory categories?</p>
+<p><%=@staffcategory.name%></p>
 
 <div>
-<%= submit_tag("Delete scat category a/c") %>
+<%= submit_tag("Delete staffcategory category a/c") %>
 </div>
 <% end -%>
 </div>

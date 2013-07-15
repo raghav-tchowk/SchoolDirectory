@@ -20,19 +20,19 @@
 		
 
 		</tr>
-		<% @scats.each do |scat| %>
+		<% @staffcategoies.each do |staffcategory| %>
 
 			<tr>
-				<td><%=scat.id%></td>
-				<td><%=scat.name%></td>
-				<td><%=scat.description %></td>
-				<td><%=scat.status %></td>
+				<td><%=staffcategory.id%></td>
+				<td><%=staffcategory.name%></td>
+				<td><%=staffcategory.description %></td>
+				<td><%=staffcategory.status %></td>
 				
 				<td>
 
-					<%=link_to("Show", {:action=>"show", :id=>scat.id}) %>
-				<%= link_to("Edit", {:action=>"edit", :id=>scat.id}) %>
-				<%= link_to("Delete", {:action=>"delete", :id=>scat.id}) %>
+					<%=link_to("Show", {:action=>"show", :id=>staffcategory.id}) %>
+				<%= link_to("Edit", {:action=>"edit", :id=>staffcategory.id}) %>
+				<%= link_to("Delete", {:action=>"delete", :id=>staffcategory.id}) %>
 
 
 
@@ -44,5 +44,5 @@
 	</table>
 </div>
 
-<%= link_to("<<new scat category>>", {:action=>"new"}) %>
+<%= link_to("<<new staffcategory category>>", {:action=>"new"}) %>
 

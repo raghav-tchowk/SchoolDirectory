@@ -11,25 +11,25 @@
 
 
 
-	<table summary="notes list">
+	<table summary="alerttype1s list">
 		<tr>
 		<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		<th>Alert&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		<th>Details&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		
 		</tr>
-		<% @notes.each do |note| %>
+		<% @alerttype1s.each do |alerttype1| %>
 
 			<tr>
-				<td><%=note.id%></td>
-				<td><%=note.name%></td>
-				<td><%=note.detail%></td>
+				<td><%=alerttype1.id%></td>
+				<td><%=alerttype1.name%></td>
+				<td><%=alerttype1.detail%></td>
 				
 				<td>
 
-					<%=link_to("Show", {:action=>"show", :id=>note.id}) %>
-				<%= link_to("Edit", {:action=>"edit", :id=>note.id}) %>
-				<%= link_to("Delete", {:action=>"delete", :id=>note.id}) %>
+					<%=link_to("Show", {:action=>"show", :id=>alerttype1.id}) %>
+				<%= link_to("Edit", {:action=>"edit", :id=>alerttype1.id}) %>
+				<%= link_to("Delete", {:action=>"delete", :id=>alerttype1.id}) %>
 
 
 

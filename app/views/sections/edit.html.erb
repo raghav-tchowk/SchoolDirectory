@@ -1,7 +1,7 @@
 <%= link_to("<<Back to list", {:action=>"list"}) %>
 <div >
 <h2>Update Section</h2>
-<%= form_for(:sect, :url=>{:action=>"update", :id=>@sect.id}) do |f| %>
+<%= form_for(:section, :url=>{:action=>"update", :id=>@section.id}) do |f| %>
 
 
 <%= render(:partial=>"form", :locals=>{:f=>f}) %>
@@ -20,7 +20,7 @@
 </div>
 
 <div style="color:red">
-	<% @sect.errors.full_messages.each do |err| %>
+	<% @section.errors.full_messages.each do |err| %>
     	*<%= err %><br />
     <% end %>
 </div>

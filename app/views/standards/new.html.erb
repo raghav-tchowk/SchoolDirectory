@@ -1,7 +1,7 @@
 <%= link_to("<<Back to full list", {:action=>"list"}) %>
 <div>
 <h2>Create a new Standard</h2>
-<%= form_for(:note, :url=>{:action=>"create"}) do |f| %>
+<%= form_for(:standard, :url=>{:action=>"create"}) do |f| %>
 
 
 
@@ -20,7 +20,7 @@
 </div>
 
 <div style="color:red">
-	<% @note.errors.full_messages.each do |err| %>
+	<% @standard.errors.full_messages.each do |err| %>
     	*<%= err %><br />
     <% end %>
 </div>

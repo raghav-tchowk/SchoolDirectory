@@ -1,7 +1,7 @@
 <%= link_to("<<Back to full list", {:action=>"list"}) %>
 <div>
 <h2>Create staff Department</h2>
-<%= form_for(:sdept, :url=>{:action=>"create"}) do |f| %>
+<%= form_for(:staffdepartment, :url=>{:action=>"create"}) do |f| %>
 
 
 
@@ -20,7 +20,7 @@
 </div>
 
 <div style="color:red">
-	<% @sdept.errors.full_messages.each do |err| %>
+	<% @staffdepartment.errors.full_messages.each do |err| %>
     	*<%= err %><br />
     <% end %>
 </div>

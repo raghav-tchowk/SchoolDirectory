@@ -1,9 +1,9 @@
 <%= link_to("<<back to full list", {:action=>"list"}) %>
 <div>
 <h2>Delete staff department</h2>
-<%= form_for(:sdept, :url=>{:action=>"destroy", :id=>@sdept.id}) do |f| %>
+<%= form_for(:staffdepartment, :url=>{:action=>"destroy", :id=>@staffdepartment.id}) do |f| %>
 <p>Are u sure u wanna delete this staff department?</p>
-<p><%=@sdept.name%></p>
+<p><%=@staffdepartment.name%></p>
 
 <div>
 <%= submit_tag("Delete staff department a/c") %>

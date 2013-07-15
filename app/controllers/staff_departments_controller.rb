@@ -5,50 +5,50 @@ class StaffDepartmentsController < ApplicationController
   	end
 
 	def list
-	    @sdepts=StaffDepartment.all
+	    @staffdepartments=StaffDepartment.all
 	    
 	end
 
 
 	def show
-		@sdept=StaffDepartment.find(params[:id])
+		@staffdepartment=StaffDepartment.find(params[:id])
 	end
 
 	def new
-		@sdept =StaffDepartment.new
+		@staffdepartment =StaffDepartment.new
 	end
 
 	def create
-		@sdept =StaffDepartment.new(params[:sdept])
-		if @sdept.save
-		  flash[:notice]="sdept account created.  #{@sdept.name}"
-		  redirect_to(:action=>"show", :id=>@sdept.id)
+		@staffdepartment =StaffDepartment.new(params[:staffdepartment])
+		if @staffdepartment.save
+		  flash[:notice]="staffdepartment account created.  #{@staffdepartment.name}"
+		  redirect_to(:action=>"show", :id=>@staffdepartment.id)
 		else
 		  render("new")
 		end
 	end
 
 	def update
-		@sdept=StaffDepartment.find(params[:id])
-		if @sdept.update_attributes(params[:sdept])
-		  flash[:notice]="sdept account info updated.  #{@sdept.name}"
-		  redirect_to(:action=>"show", :id=>@sdept.id)    
+		@staffdepartment=StaffDepartment.find(params[:id])
+		if @staffdepartment.update_attributes(params[:staffdepartment])
+		  flash[:notice]="staffdepartment account info updated.  #{@staffdepartment.name}"
+		  redirect_to(:action=>"show", :id=>@staffdepartment.id)    
 		else
 		  render("edit")
 		end
 	end
 
 	def delete
-		@sdept=StaffDepartment.find(params[:id])
+		@staffdepartment=StaffDepartment.find(params[:id])
 	end
 
 	def destroy
 		StaffDepartment.find(params[:id]).destroy
-		flash[:notice]="sdept account destroyed."
+		flash[:notice]="staffdepartment account destroyed."
 		redirect_to(:action=>"list")
 	end
 
 	def edit
-		@sdept=StaffDepartment.find(params[:id])
+		@staffdepartment=StaffDepartment.find(params[:id])
 	end
 end

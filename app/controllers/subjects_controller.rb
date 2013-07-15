@@ -7,27 +7,27 @@ class SubjectsController < ApplicationController
 
 
   def list
-    @subs=Subject.all
+    @subjects=Subject.all
     @q=Subject.search(params[:q])
-    @subs=@q.result()
+    @subjects=@q.result()
   end
 
 
   def show
-    @sub=Subject.find(params[:id])
+    @subject=Subject.find(params[:id])
   end
 
 
   def new
-    @sub =Subject.new
+    @subject =Subject.new
   end
 
 
   def create
-    @sub =Subject.new(params[:sub])
-    if @sub.save
-      flash[:notice]="Subject #{@sub.name} created. "
-      redirect_to(:action=>"show", :id=>@sub.id)
+    @subject =Subject.new(params[:subject])
+    if @subject.save
+      flash[:notice]="Subject #{@subject.name} created. "
+      redirect_to(:action=>"show", :id=>@subject.id)
     else
       render("new")
     end
@@ -35,15 +35,15 @@ class SubjectsController < ApplicationController
 
 
   def edit
-    @sub=Subject.find(params[:id])
+    @subject=Subject.find(params[:id])
   end 
 
 
   def update
-    @sub=Subject.find(params[:id])
-    if @sub.update_attributes(params[:sub])
-      flash[:notice]="Subject account #{@sub.name} info updated."
-      redirect_to(:action=>"show", :id=>@sub.id)    
+    @subject=Subject.find(params[:id])
+    if @subject.update_attributes(params[:subject])
+      flash[:notice]="Subject account #{@subject.name} info updated."
+      redirect_to(:action=>"show", :id=>@subject.id)    
     else
       render("edit")
     end
@@ -51,7 +51,7 @@ class SubjectsController < ApplicationController
 
 
   def delete
-    @sub=Subject.find(params[:id])
+    @subject=Subject.find(params[:id])
   end
 
 

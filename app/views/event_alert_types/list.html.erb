@@ -11,25 +11,25 @@
 
 
 
-	<table summary="evalerts list">
+	<table summary="eventalerttypes list">
 		<tr>
 		<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		<th>Event Alert&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		
 		
 		</tr>
-		<% @evalerts.each do |evalert| %>
+		<% @eventalerttypes.each do |eventalerttype| %>
 
 			<tr>
-				<td><%=evalert.id%></td>
-				<td><%=evalert.name%></td>
+				<td><%=eventalerttype.id%></td>
+				<td><%=eventalerttype.name%></td>
 				
 				
 				<td>
 
-					<%=link_to("Show", {:action=>"show", :id=>evalert.id}) %>
-				<%= link_to("Edit", {:action=>"edit", :id=>evalert.id}) %>
-				<%= link_to("Delete", {:action=>"delete", :id=>evalert.id}) %>
+					<%=link_to("Show", {:action=>"show", :id=>eventalerttype.id}) %>
+				<%= link_to("Edit", {:action=>"edit", :id=>eventalerttype.id}) %>
+				<%= link_to("Delete", {:action=>"delete", :id=>eventalerttype.id}) %>
 
 
 

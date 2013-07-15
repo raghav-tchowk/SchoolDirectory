@@ -7,27 +7,27 @@ class BoardsController < ApplicationController
 
 
   def list
-    @notes=Board.all
+    @boards=Board.all
     @q=Board.search(params[:q])
-    @notes=@q.result()
+    @boards=@q.result()
   end
 
 
   def show
-    @note=Board.find(params[:id])
+    @board=Board.find(params[:id])
   end
 
 
   def new
-    @note =Board.new
+    @board =Board.new
   end
 
 
   def create
-    @note =Board.new(params[:note])
-    if @note.save
-      flash[:notice]="Board a/c #{@note.name} created. "
-      redirect_to(:action=>"show", :id=>@note.id)
+    @board =Board.new(params[:board])
+    if @board.save
+      flash[:notice]="Board a/c #{@board.name} created. "
+      redirect_to(:action=>"show", :id=>@board.id)
     else
       render("new")
     end
@@ -35,15 +35,15 @@ class BoardsController < ApplicationController
 
 
   def edit
-    @note=Board.find(params[:id])
+    @board=Board.find(params[:id])
   end 
 
 
   def update
-    @note=Board.find(params[:id])
-    if @note.update_attributes(params[:note])
-      flash[:notice]="Board account #{@note.name} info updated."
-      redirect_to(:action=>"show", :id=>@note.id)    
+    @board=Board.find(params[:id])
+    if @board.update_attributes(params[:board])
+      flash[:notice]="Board account #{@board.name} info updated."
+      redirect_to(:action=>"show", :id=>@board.id)    
     else
       render("edit")
     end
@@ -51,14 +51,14 @@ class BoardsController < ApplicationController
 
 
   def delete
-    @note=Board.find(params[:id])
+    @board=Board.find(params[:id])
   end
 
 
   def destroy
-    @note=Board.find(params[:id])
-    flash[:notice]=" Board account #{@note.name} destroyed."
-    @note.destroy
+    @board=Board.find(params[:id])
+    flash[:notice]=" Board account #{@board.name} destroyed."
+    @board.destroy
     redirect_to(:action=>"list")
   end
 end

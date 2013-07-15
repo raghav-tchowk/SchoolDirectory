@@ -1,9 +1,9 @@
 <%= link_to("<<back to full list", {:action=>"list"}) %>
 <div>
 <h2>Delete ExamType</h2>
-<%= form_for(:extype, :url=>{:action=>"destroy", :id=>@extype.id}) do |f| %>
+<%= form_for(:examtype, :url=>{:action=>"destroy", :id=>@examtype.id}) do |f| %>
 <p>Are u sure u wanna delete this ExamType?</p>
-<p><%=@extype.name%></p>
+<p><%=@examtype.name%></p>
 
 <div>
 <%= submit_tag("Delete ExamType") %>

@@ -8,18 +8,18 @@
 
 
 
-<h1>Showing Sticky note <%=@note.title %></h1>
+<h1>Showing Sticky stickynote <%=@stickynote.title %></h1>
 <%= link_to("<<Back to full list", {:action=>"list"}) %>
 <div>
 	<ul>
-	<li><b>ID</b> <%=@note.id%></li>
-	<li><b>Note Title</b>  <%=@note.title%></li>
-	<li><b>Subject</b>  <%=@note.subject %></li>
-	<li><b>Target date</b>  <%=@note.target_date %></li>
-	<li><b>Reminder set</b>  <%=@note.remind_me %></li>
-	<li><b>priority</b>  <%=@note.priority %></li>
+	<li><b>ID</b> <%=@stickynote.id%></li>
+	<li><b>Note Title</b>  <%=@stickynote.title%></li>
+	<li><b>Subject</b>  <%=@stickynote.subject %></li>
+	<li><b>Target date</b>  <%=@stickynote.target_date %></li>
+	<li><b>Reminder set</b>  <%=@stickynote.remind_me %></li>
+	<li><b>priority</b>  <%=@stickynote.priority %></li>
 	</ul>
 
 </div>
 
-<%= link_to("update>>", {:action=>"edit", :id=>@note.id}) %>
+<%= link_to("update>>", {:action=>"edit", :id=>@stickynote.id}) %>

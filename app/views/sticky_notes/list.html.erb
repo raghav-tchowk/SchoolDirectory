@@ -11,10 +11,10 @@
 
 
 
-	<table summary="notes list">
+	<table summary="stickynotes list">
 		<tr>
 		<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-		<th>note title&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>stickynote title&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		<th>Subject&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		<th>Target Date&nbsp;&nbsp;&nbsp;&nbsp;</th>
 		<th>Remindar set&nbsp;&nbsp;&nbsp;&nbsp;</th>
@@ -29,21 +29,21 @@
 
 
 		</tr>
-		<% @notes.order("target_date ASC").order("priority ASC").order("remind_me DESC").each do |note| %>
+		<% @stickynotes.order("target_date ASC").order("priority ASC").order("remind_me DESC").each do |stickynote| %>
 
 			<tr>
-				<td><%=note.id%></td>
-				<td><%=note.title%></td>
-				<td><%=note.subject%></td>
-				<td><%=note.target_date %></td>
-				<td><%=note.remind_me %></td>
-				<td><%=note.priority %></td>
+				<td><%=stickynote.id%></td>
+				<td><%=stickynote.title%></td>
+				<td><%=stickynote.subject%></td>
+				<td><%=stickynote.target_date %></td>
+				<td><%=stickynote.remind_me %></td>
+				<td><%=stickynote.priority %></td>
 				
 				<td>
 
-					<%=link_to("Show", {:action=>"show", :id=>note.id}) %>
-				<%= link_to("Edit", {:action=>"edit", :id=>note.id}) %>
-				<%= link_to("Delete", {:action=>"delete", :id=>note.id}) %>
+					<%=link_to("Show", {:action=>"show", :id=>stickynote.id}) %>
+				<%= link_to("Edit", {:action=>"edit", :id=>stickynote.id}) %>
+				<%= link_to("Delete", {:action=>"delete", :id=>stickynote.id}) %>
 
 
 
@@ -55,5 +55,5 @@
 	</table>
 </div>
 
-<%= link_to("<<new note>>", {:action=>"new"}) %>
+<%= link_to("<<new stickynote>>", {:action=>"new"}) %>
 

@@ -8,16 +8,16 @@
 
 
 
-<h1>Showing Sticky note <%=@note.name %></h1>
+<h1>Showing Sticky board <%=@board.name %></h1>
 <%= link_to("<<Back to full list", {:action=>"list"}) %>
 <div>
 	<ul>
-	<li><b>ID</b> <%=@note.id%></li>
-	<li><b>Name</b>  <%=@note.name%></li>
-	<li><b>Full name</b>  <%=@note.full_name %></li>
+	<li><b>ID</b> <%=@board.id%></li>
+	<li><b>Name</b>  <%=@board.name%></li>
+	<li><b>Full name</b>  <%=@board.full_name %></li>
 	
 	</ul>
 
 </div>
 
-<%= link_to("update>>", {:action=>"edit", :id=>@note.id}) %>
+<%= link_to("update>>", {:action=>"edit", :id=>@board.id}) %>
